@@ -1,0 +1,15 @@
+**/node_modules/
+**/dist/
+**/.astro/
+**/.nuxt/
+**/.output/
+**/.env
+**/.env.*
+**/*.env
+**/tokens.env
+**/.secrets/
+**/bank_docs/
+preview-*.png
+frontend-nuxt/artifacts/
+.system/review/backups/
+.system/review/2026-10-01-reading-rail-*.png

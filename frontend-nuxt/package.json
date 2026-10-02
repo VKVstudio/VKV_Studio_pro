@@ -1,0 +1,21 @@
+{
+  "name": "vkvstudio-pro-nuxt-preview",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "packageManager": "pnpm@10.34.1",
+  "scripts": {
+    "dev": "nuxt dev --host 127.0.0.1 --port 4322",
+    "build": "node --experimental-strip-types scripts/content-gate.mjs && nuxt generate && node scripts/security-headers.mjs",
+    "build:public": "node scripts/public-build.mjs",
+    "preview": "node scripts/preview.mjs",
+    "typecheck": "nuxt typecheck"
+  },
+  "dependencies": {
+    "nuxt": "4.5.2"
+  },
+  "devDependencies": {
+    "typescript": "~5.9.3",
+    "vue-tsc": "^3.3.11"
+  }
+}

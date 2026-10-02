@@ -1,0 +1,9 @@
+*.sqlite3
+*.sqlite3-*
+*.json
+!private-config.example.json
+!workflows/editorial-offline.json
+!workflows/skeptic-offline.json
+!ui/fixture-pack.json
+__pycache__/
+out/

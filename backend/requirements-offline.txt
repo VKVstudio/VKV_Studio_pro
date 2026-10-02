@@ -1,0 +1,3 @@
+# Exact versions present in the tested execution runtime; nothing installed here.
+cryptography==50.0.1
+Pillow==12.3.0

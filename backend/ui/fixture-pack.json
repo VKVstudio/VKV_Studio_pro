@@ -1,0 +1,90 @@
+{
+  "id": "story-one",
+  "revision": 3,
+  "status": "evidence_checked",
+  "pack": {
+    "candidate": {
+      "id": "story-one",
+      "slug": "story-one",
+      "sourceUrl": "https://example.org/announcement",
+      "sourceDate": "2026-09-26",
+      "topic": "Local AI",
+      "reason": "Potential business impact",
+      "sourceLicence": "Link and short paraphrase only",
+      "sourceExcerpt": "The vendor announced a tool."
+    },
+    "sourceText": "The vendor announced a tool.",
+    "ledger": {
+      "claims": [
+        {
+          "id": "announced",
+          "kind": "source",
+          "claim": "A tool was announced",
+          "sourceUrl": "https://example.org/announcement",
+          "support": "Official announcement",
+          "limit": "Availability not independently tested"
+        },
+        {
+          "id": "availability",
+          "kind": "unknown",
+          "claim": "Availability to customers",
+          "sourceUrl": null,
+          "support": "No direct access test",
+          "limit": "Do not claim deployment"
+        }
+      ],
+      "mediaRights": "No third-party media used",
+      "clientMentionAllowed": false
+    },
+    "article": {
+      "slug": "story-one",
+      "category": "Update · local AI",
+      "title": "An AI tool was announced",
+      "dek": "What the announcement means for buyers",
+      "takeaway": "Wait for a measured release.",
+      "eventDate": "2026-09-26",
+      "checkedAt": "2026-09-27",
+      "minutes": 2,
+      "art": "ai",
+      "evidence": "The official announcement describes the tool.",
+      "limits": "We have not tested availability or performance.",
+      "sections": [
+        {
+          "heading": "What happened",
+          "paragraphs": [
+            "The company announced a tool."
+          ]
+        },
+        {
+          "heading": "What to do",
+          "paragraphs": [
+            "Check release status before buying."
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "label": "Official announcement",
+          "url": "https://example.org/announcement"
+        }
+      ],
+      "service": {
+        "label": "Explore on-prem AI",
+        "url": "https://vkvstudio.com/en/services/on-prem-ai/",
+        "reason": "A scoped pilot can test this on your own data."
+      },
+      "author": "Valerii Karpov",
+      "facts": "An announcement exists.",
+      "interpretation": "This might matter to buyers.",
+      "practicalDecision": "Wait for a test.",
+      "evidenceStatus": "source",
+      "language": "en",
+      "publishedAt": "2026-09-28",
+      "canonicalUrl": "https://vkvstudio.pro/briefings/story-one/",
+      "mediaRights": "No third-party media used",
+      "previewImage": "/images/story-one.webp"
+    },
+    "fixture": true,
+    "importedAt": "2026-10-01T08:00:00+00:00"
+  }
+}

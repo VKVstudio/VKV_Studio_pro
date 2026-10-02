@@ -1,0 +1,17 @@
+{
+  "specVersion": "1.0",
+  "entries": [
+    {
+      "identifier": "urn:air:vkvstudio.pro:skills:vkvstudio-briefings",
+      "displayName": "Read VKVstudio.pro briefings",
+      "type": "text/markdown; profile=\"urn:air:agent-skills\"",
+      "url": "https://vkvstudio.pro/agent-skills/vkvstudio-briefings/SKILL.md",
+      "description": "Read a visible VKVstudio.pro briefing, its original sources, dates and stated limits. Use when separating editorial judgement from evidence and identifying a written project next step.",
+      "representativeQueries": [
+        "What does this visible VKVstudio.pro briefing establish and what remains editorial judgement?",
+        "Which original sources and dates support the briefing?",
+        "What written next step follows from the briefing and a relevant VKVstudio service?"
+      ]
+    }
+  ]
+}

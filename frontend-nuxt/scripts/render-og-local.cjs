@@ -1,0 +1,5 @@
+// Existing Windows Chrome/Playwright only; no install, listener or GPU.
+const fs=require('node:fs'),path=require('node:path');
+const {chromium}=require('C:/Users/user/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+(async()=>{const browser=await chromium.launch({executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe',headless:true,args:['--disable-gpu']});const page=await browser.newPage({viewport:{width:1200,height:627},deviceScaleFactor:1});await page.route('**/*',route=>route.abort());
+for(const name of fs.readdirSync('artifacts').filter(name=>/^og-[a-z0-9-]+\.html$/.test(name))){await page.setContent(fs.readFileSync(path.join('artifacts',name),'utf8'));await page.evaluate(()=>document.fonts.ready);const bounds=await page.locator('h1').boundingBox();if(!bounds||bounds.x<0||bounds.y+bounds.height>515||bounds.x+bounds.width>1200)throw Error('OG title clipped: '+name);await page.screenshot({path:path.join('public/og',name.slice(3,-5)+'.png')});console.log('Rendered',name,'1200x627');}await browser.close();})().catch(error=>{console.error(error);process.exit(1)});

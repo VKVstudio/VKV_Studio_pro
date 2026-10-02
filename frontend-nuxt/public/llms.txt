@@ -1,0 +1,30 @@
+# VKVstudio.pro
+
+> VKVstudio.pro is the editorial side of VKV Studio, written and edited by Valerii Karpov. It connects engineering evidence to practical business decisions.
+
+Last updated: 2026-10-02
+
+The English-language editorial and studio materials target European B2B markets, the United Kingdom, and the United States. Commercial correspondence uses English. Outreach eligibility is checked separately per country and recipient.
+
+## Editorial pages
+
+- [Home](https://vkvstudio.pro/): the editorial overview.
+- [Briefings archive](https://vkvstudio.pro/briefings/): follow the visible publication and evidence status of each entry.
+- [Editorial method](https://vkvstudio.pro/method/): primary sources, evidence status, limits and practical decisions.
+- [Studio](https://vkvstudio.pro/studio/): Valerii Karpov and the engineering practice behind the desk.
+- [Privacy](https://vkvstudio.pro/privacy/): browser storage, hosting requests, external links and the limits of the review build.
+
+## Publication and evidence
+
+A preview follows each page's visible status and is not evidence of publication. A public release requires the studio owner's acceptance. This guide does not list unpublished preview articles.
+
+Keep primary-source reporting, first-hand tests, estimates and interpretation distinct. Preserve stated limits. A lab result stays attached to its URL, date and conditions; it does not establish visitor outcomes or a commercial guarantee.
+
+## Studio services and written contact
+
+- [VKVstudio services](https://vkvstudio.com/en/services/): current service scope and pricing on the separate studio website.
+- [Contact](https://vkvstudio.com/en/contact/): prepare a project enquiry by email. The form prepares a draft; sending it is a separate action by the reader. Questions, scope, proposals, contracts and approval use written correspondence.
+- [Trust & Process](https://vkvstudio.com/en/trust/): agreements and delivery process.
+- [Studio privacy](https://vkvstudio.com/en/privacy/): the separate website and its tools have their own data-handling notice.
+
+For factual claims, cite the relevant page and original sources. Do not turn announcements, previews or estimates into statements about delivered work.
