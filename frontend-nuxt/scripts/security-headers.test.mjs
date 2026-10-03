@@ -108,3 +108,17 @@ test('JSON data does not gain executable hash authorization', async () => {
   const headers = await readFile(join(root, '_headers'), 'utf8');
   assert.ok(!headers.includes(digest(data, 'sha256')));
 });
+
+
+test('native search permits only same-origin form navigation without weakening script and TT policy', async () => {
+  const root = await fixture();
+  const result = generate(root);
+  assert.equal(result.status, 0, result.stderr);
+  const headers = await readFile(join(root, '_headers'), 'utf8');
+  assert.match(headers, /form-action 'self';/);
+  assert.doesNotMatch(headers, /form-action[^;]*(?:https?:|\*|'unsafe-)/);
+  assert.ok(headers.includes("'strict-dynamic'"));
+  assert.ok(headers.includes("require-trusted-types-for 'script'"));
+  assert.ok(headers.includes("base-uri 'none'"));
+  assert.doesNotMatch(headers, /'unsafe-inline'|'unsafe-eval'/);
+});

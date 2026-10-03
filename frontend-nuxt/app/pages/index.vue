@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { studioLink } from '~/utils/studio-links';
 import ArticleTeaser from '~/components/ArticleTeaser.vue';
+import HomeBriefingSearch from '~/components/HomeBriefingSearch.vue';
 import { articles, articlePath, canonicalUrl } from '~/data/articles';
 const studioOrigin = useAppConfig().studioPreviewOrigin;
 const recentUpdates = articles.filter((article) => article.eventDate).sort((a, b) => b.eventDate!.localeCompare(a.eventDate!)).slice(0, 3);
@@ -46,6 +47,7 @@ useHead({ link: [{ rel: 'canonical', href: canonicalUrl('/') }] });
     <section class="editorial-grid" aria-labelledby="briefings-title">
       <div class="feature-column">
         <div class="section-heading"><h2 id="briefings-title">The briefing desk</h2><span>01 / LEAD STORY</span></div>
+        <HomeBriefingSearch />
         <ArticleTeaser :article="articles[0]!" featured />
       </div>
       <aside class="upcoming" aria-label="More briefings">

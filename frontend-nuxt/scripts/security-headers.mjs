@@ -59,7 +59,7 @@ const csp = [
   "font-src 'self'",
   "connect-src 'self'",
   "base-uri 'none'",
-  "form-action 'none'",
+  "form-action 'self'",
   "frame-ancestors 'none'",
   "object-src 'none'",
   "worker-src 'none'",

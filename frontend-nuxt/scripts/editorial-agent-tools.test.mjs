@@ -511,3 +511,53 @@ test('plugin never consults legacy navigator, adds a polyfill or exposes tools a
   assert.match(plugin, /\.modelContext/);
   assert.doesNotMatch(plugin, /unregisterTool|preview-articles|navigator|provideContext|exposedTo|polyfill|fetch\(|storage|innerHTML|eval\(/);
 });
+
+
+test('home search exposes a visible labeled native GET tool and preserves the archive contract', () => {
+  const source = fs.readFileSync(new URL('../app/components/HomeBriefingSearch.vue', import.meta.url), 'utf8');
+  const home = fs.readFileSync(new URL('../app/pages/index.vue', import.meta.url), 'utf8');
+  assert.match(source, /action="\/briefings\/"/);
+  assert.match(source, /method="get"/);
+  assert.match(source, /toolname="search_briefings"/);
+  assert.match(source, /toolautosubmit/);
+  assert.match(source, /name="q"/);
+  assert.match(source, /maxlength="160"/);
+  assert.match(source, /<label for="home-briefings-query">Search briefings<\/label>/);
+  assert.doesNotMatch(source, /type="hidden"|v-html|innerHTML|fetch\(/);
+  assert(home.indexOf('<HomeBriefingSearch />') < home.indexOf('<ArticleTeaser'));
+  for (const raw of ['', '  Google  ', 'Հայերեն 🤖', '<script>& #?=+']) {
+    const params = briefingSearchParams(raw);
+    const destination = new URL('/briefings/', 'https://vkvstudio.pro');
+    destination.search = new URLSearchParams({ q: params.q ?? '' }).toString();
+    assert.equal(destination.origin, 'https://vkvstudio.pro');
+    assert.equal(destination.pathname, '/briefings/');
+    assert.equal(readBriefingArchiveState(Object.fromEntries(destination.searchParams)).query, raw.trim());
+  }
+});
+
+test('home submit keeps valid agent/human navigation native and reports invalid DOM input', async () => {
+  const { default: ts } = await import('typescript');
+  const source = fs.readFileSync(new URL('../app/components/HomeBriefingSearch.vue', import.meta.url), 'utf8');
+  const script = source.match(/<script setup lang="ts">([\s\S]*?)<\/script>/)[1].replace(/^import .*;\r?\n/gm, '');
+  const compiled = ts.transpileModule(script, { compilerOptions: { target: ts.ScriptTarget.ES2022, module: ts.ModuleKind.None } }).outputText;
+  class Input { constructor(value) { this.value = value; this.focused = false; } focus() { this.focused = true; } }
+  class Form { constructor(input) { this.input = input; this.elements = { namedItem: key => key === 'q' ? input : null }; } }
+  class Data { constructor(form) { this.form = form; } get(key) { return key === 'q' ? this.form.input.value : null; } }
+  const make = new Function('ref', 'briefingSearchParams', 'HTMLFormElement', 'HTMLInputElement', 'FormData', compiled + ';return {onSearchSubmit,searchInput,searchError};');
+  for (const raw of ['  Google  ', '', 'Հայերեն 🤖', '<script>& #?=+', 'x'.repeat(160)]) {
+    const handler = make(value => ({ value }), briefingSearchParams, Form, Input, Data);
+    const input = new Input(raw); handler.searchInput.value = input;
+    let prevented = false; let responded = false;
+    handler.onSearchSubmit({ currentTarget: new Form(input), agentInvoked: true, preventDefault() { prevented = true; }, respondWith() { responded = true; } });
+    assert.equal(prevented, false); assert.equal(responded, false);
+    assert.equal(input.value, raw.trim()); assert.equal(handler.searchError.value, '');
+  }
+  for (const raw of ['x'.repeat(161), 'bad\u0000query', '\uD800']) {
+    const handler = make(value => ({ value }), briefingSearchParams, Form, Input, Data);
+    const input = new Input(raw); handler.searchInput.value = input;
+    let prevented = false; let response;
+    handler.onSearchSubmit({ currentTarget: new Form(input), agentInvoked: true, preventDefault() { prevented = true; }, respondWith(value) { assert(prevented); response = value; } });
+    assert(prevented); assert(input.focused); assert(handler.searchError.value);
+    assert.equal((await response).isError, true);
+  }
+});
