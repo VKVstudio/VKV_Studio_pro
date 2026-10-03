@@ -26,6 +26,9 @@ export default defineNuxtConfig({
   devtools: { enabled: false },
   features: { inlineStyles: false },
   experimental: {
+    // Static editorial data lives in route modules; inline the empty hydration
+    // payload instead of fetching a separate file on first load/navigation.
+    payloadExtraction: false,
     defaults: {
       // Prepare navigation on pointer/focus intent, without competing with first paint.
       nuxtLink: { prefetchOn: { visibility: false, interaction: true } },
