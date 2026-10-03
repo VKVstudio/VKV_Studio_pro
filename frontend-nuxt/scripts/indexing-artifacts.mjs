@@ -48,6 +48,6 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
   // This command runs under Node, whose TS loader does not resolve Nuxt's
   // extensionless app imports. The gate already validated this exact export.
   const articles = JSON.parse(await readFile(join(cwd, 'app/data/approved-articles.json'), 'utf8'));
-  await writeIndexingArtifacts(join(cwd, '.output/public'), publicRoutes(articles));
+  await writeIndexingArtifacts(resolve(process.argv[2] || join(cwd, '.output/public')), publicRoutes(articles));
   console.log('Public robots and sitemap prepared locally. Deployment still requires owner approval.');
 }

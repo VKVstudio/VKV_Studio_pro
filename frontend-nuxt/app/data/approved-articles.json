@@ -1,1 +1,499 @@
-[]
+[
+  {
+    "art": "agents-api",
+    "author": "Valerii Karpov",
+    "canonicalUrl": "https://vkvstudio.pro/briefings/agents-api-still-needs-a-boundary/",
+    "category": "Update · AI agents",
+    "checkedAt": "2026-10-01",
+    "dek": "OpenAI’s September 10 public beta manages parts of an agent workflow. A buyer still needs to define the task, permitted actions, data boundary and acceptance test.",
+    "eventDate": "2026-09-10",
+    "evidence": "OpenAI announced the Agents API in public beta on September 10 and documented hosted, self-managed and partner sandbox choices. This article analyses the release; it does not report a production trial.",
+    "evidenceStatus": "source",
+    "facts": "OpenAI announced the Agents API in public beta on September 10 and documented hosted, self-managed and partner sandbox choices. This article analyses the release; it does not report a production trial.",
+    "interpretation": "A useful example is a support assistant drafting an answer from one approved manual set, with source passages and an explicit “not found” when evidence is missing. A person accepts the answer. This is a proposed pilot, not an observed time saving.\n\nAgree test questions, incorrect-document cases, permitted users and the cost ceiling before the trial. A documentation RAG pilot tests this retrieval task; it does not include autonomous purchasing, CRM changes or message sending. Those actions need a separate scope and permission design.",
+    "language": "en",
+    "limits": "No claim here about cost savings, reliability or completion rates in a client workflow. Those depend on the task, tools, data and acceptance test, and need to be measured in a pilot.",
+    "mediaRights": "The 48 section scenes and paired Studio workbench are documented staged generated illustrations, not factual photographs or test screenshots. Provenance/rights evidence for the original article covers, OG derivatives, logo and remaining shipped artwork is incomplete. This content-only export records that unresolved state; it is not a media-rights certification or public release approval.",
+    "minutes": 3,
+    "practicalDecision": "ACT on one documented task; WATCH the API until it passes your acceptance cases. If the need is answering from manuals, start with document retrieval. If the steps are fixed, simple automation may be enough.",
+    "previewImage": "/images/agents-api-day.webp",
+    "publishedAt": "2026-10-02",
+    "sections": [
+      {
+        "heading": "What the release actually provides",
+        "paragraphs": [
+          "OpenAI announced the Agents API in public beta on September 10. It offers managed coordination for longer tasks and a choice of hosted, self-managed or partner execution environments. This is a vendor release analysis; no VKV client deployment with this API is claimed.",
+          "The service does not define your company’s permissions or decide which records an assistant may change. The buyer must name the operator, allowed data, maximum spend and the response to an incorrect or unfinished result."
+        ]
+      },
+      {
+        "heading": "A pilot should be narrower than the demo",
+        "paragraphs": [
+          "A useful example is a support assistant drafting an answer from one approved manual set, with source passages and an explicit “not found” when evidence is missing. A person accepts the answer. This is a proposed pilot, not an observed time saving.",
+          "Agree test questions, incorrect-document cases, permitted users and the cost ceiling before the trial. A documentation RAG pilot tests this retrieval task; it does not include autonomous purchasing, CRM changes or message sending. Those actions need a separate scope and permission design."
+        ]
+      },
+      {
+        "heading": "Choose the hosting boundary before the model",
+        "paragraphs": [
+          "ACT by choosing the simplest process that meets the need. Fixed rules may call for ordinary automation. Questions over documents may call for retrieval. An agent is relevant when the next permitted step depends on the result of earlier work.",
+          "WATCH until evidence shows that the extra coordination is useful for your workload. Check data location, hosting operations and recovery as well as the model. PASS on broad autonomy without a named owner, reversible actions and a demonstrated failure path."
+        ]
+      }
+    ],
+    "service": {
+      "label": "Explore the documentation RAG pilot",
+      "reason": "For questions over manuals or internal documents, review the documentation RAG pilot: one document set, agreed questions, cited answers and unresolved cases. Autonomous actions, CRM changes and sending messages require a separate scope.",
+      "url": "https://vkvstudio.com/en/services/rag-pilot/"
+    },
+    "slug": "agents-api-still-needs-a-boundary",
+    "sources": [
+      {
+        "label": "OpenAI: Introducing the Agents API, September 10, 2026",
+        "url": "https://openai.com/index/introducing-the-agents-api/"
+      },
+      {
+        "label": "OpenAI Developers: Agents API overview",
+        "url": "https://developers.openai.com/api/docs/guides/agents-api/overview"
+      }
+    ],
+    "takeaway": "ACT on one documented task; WATCH the API until it passes your acceptance cases. If the need is answering from manuals, start with document retrieval. If the steps are fixed, simple automation may be enough.",
+    "title": "Agent infrastructure got easier. Delegation still needs a boundary."
+  },
+  {
+    "art": "ai-search-fundamentals",
+    "author": "Valerii Karpov",
+    "canonicalUrl": "https://vkvstudio.pro/briefings/ai-search-no-magic-file/",
+    "category": "Source note · AI search",
+    "checkedAt": "2026-10-01",
+    "dek": "An evergreen purchasing checklist: establish crawlable pages, supported claims and an honest measurement plan before paying for Google AI-search visibility.",
+    "eventDate": null,
+    "evidence": "Google Search Central says ordinary SEO fundamentals apply to AI Overviews and AI Mode, with no special AI file or schema required. Eligibility does not guarantee inclusion. No client experiment is reported here.",
+    "evidenceStatus": "source",
+    "facts": "Google Search Central says ordinary SEO fundamentals apply to AI Overviews and AI Mode, with no special AI file or schema required. Eligibility does not guarantee inclusion. No client experiment is reported here.",
+    "interpretation": "Make a short list of the pages that explain what you sell. Check whether their important text can be crawled, whether the pages are indexed, and whether the visible scope matches the evidence. Ask what customer question each page answers.\n\nKeep three results separate: page eligibility, an observed citation for a dated question, and a qualified enquiry. Record the engine, query, country and language for citation observations. Google-specific checks do not prove visibility in other assistants.",
+    "language": "en",
+    "limits": "This Google guidance does not establish rules for every AI engine, supplier recommendation or sales outcome. We have not measured client rankings, answer citations or enquiries for this note.",
+    "mediaRights": "The 48 section scenes and paired Studio workbench are documented staged generated illustrations, not factual photographs or test screenshots. Provenance/rights evidence for the original article covers, OG derivatives, logo and remaining shipped artwork is incomplete. This content-only export records that unresolved state; it is not a media-rights certification or public release approval.",
+    "minutes": 2,
+    "practicalDecision": "ACT on missing search fundamentals. PASS on a promise that a special file or schema guarantees Google AI placement. This guide concerns eligibility; the separate rollout briefing concerns the new reporting controls.",
+    "previewImage": "/images/ai-search-fundamentals-day.webp",
+    "publishedAt": "2026-10-02",
+    "sections": [
+      {
+        "heading": "The source says less—and more—than a sales deck",
+        "paragraphs": [
+          "Google’s guidance describes eligibility through ordinary search requirements: the page must be indexed and eligible for a search snippet. It does not require an additional AI-specific file or special structured-data format. Eligible pages are still not guaranteed an appearance.",
+          "For a business owner, that distinction separates a technical prerequisite from a purchased outcome. A supplier can investigate pages and improve their explanations; an inclusion guarantee needs evidence that this guidance does not provide."
+        ]
+      },
+      {
+        "heading": "What to measure before changing the site",
+        "paragraphs": [
+          "Make a short list of the pages that explain what you sell. Check whether their important text can be crawled, whether the pages are indexed, and whether the visible scope matches the evidence. Ask what customer question each page answers.",
+          "Keep three results separate: page eligibility, an observed citation for a dated question, and a qualified enquiry. Record the engine, query, country and language for citation observations. Google-specific checks do not prove visibility in other assistants."
+        ]
+      },
+      {
+        "heading": "The business decision",
+        "paragraphs": [
+          "ACT if key pages are blocked, thin or unclear. Ask for a baseline and a list of changes you can inspect. WATCH if the basics are sound but no relevant query set has been measured; define that set before buying another package.",
+          "PASS if the offer is only a magic file or a guaranteed AI answer placement. This evergreen checklist is for choosing the work. The linked Google rollout briefing explains a separate question: what the announced reporting and controls can tell a site owner."
+        ]
+      }
+    ],
+    "service": {
+      "label": "See the AI visibility audit",
+      "reason": "If your decision is whether owned pages are eligible and useful for your buyers, request the AI visibility audit scope. It is an investigation, not guaranteed inclusion or ad placement.",
+      "url": "https://vkvstudio.com/en/services/geo-audit/"
+    },
+    "slug": "ai-search-no-magic-file",
+    "sources": [
+      {
+        "label": "Google Search Central: AI features and your website",
+        "url": "https://developers.google.com/search/docs/appearance/ai-features"
+      },
+      {
+        "label": "Google Search Central: Article structured data",
+        "url": "https://developers.google.com/search/docs/appearance/structured-data/article"
+      }
+    ],
+    "takeaway": "ACT on missing search fundamentals. PASS on a promise that a special file or schema guarantees Google AI placement. This guide concerns eligibility; the separate rollout briefing concerns the new reporting controls.",
+    "title": "Google’s AI search guidance starts with a website people can use."
+  },
+  {
+    "art": "google-ai-search",
+    "author": "Valerii Karpov",
+    "canonicalUrl": "https://vkvstudio.pro/briefings/google-ai-search-controls-and-insights/",
+    "category": "Update · AI search",
+    "checkedAt": "2026-10-01",
+    "dek": "Google expanded Search Console insights and site-owner controls on August 31. Here is what the new view can answer—and what it cannot.",
+    "eventDate": "2026-08-31",
+    "eventLabel": "GLOBAL ROLLOUT",
+    "evidence": "Google’s June 3 announcement was updated on August 31 to say AI-feature controls and Search Console insights had rolled out to all websites worldwide. This is a source review, not a test in a client Search Console account.",
+    "evidenceStatus": "source",
+    "facts": "Google’s June 3 announcement was updated on August 31 to say AI-feature controls and Search Console insights had rolled out to all websites worldwide. This is a source review, not a test in a client Search Console account.",
+    "interpretation": "Consider a supplier whose guide appears for an informational question while its service page does not explain scope clearly. The impression is a reason to inspect those pages, not proof of buyer intent or return on advertising spend. The example is an editorial hypothesis, not a measured client case.\n\nKeep Google’s reporting separate from observations in other assistants and from enquiries. Google describes the AI-use control as affecting the corresponding traffic and impressions, rather than an ordinary ranking lever outside those features. Choose a control for a documented business reason.",
+    "language": "en",
+    "limits": "The announcement does not establish that a given page will appear, receive clicks or produce customers. We have not measured a change in VKV Studio or client traffic from this rollout.",
+    "mediaRights": "The 48 section scenes and paired Studio workbench are documented staged generated illustrations, not factual photographs or test screenshots. Provenance/rights evidence for the original article covers, OG derivatives, logo and remaining shipped artwork is incomplete. This content-only export records that unresolved state; it is not a media-rights certification or public release approval.",
+    "minutes": 3,
+    "practicalDecision": "ACT: compare a small set of service pages with the announced Google AI-feature insights. WATCH the resulting baseline; an impression is not a citation, qualified enquiry or sale.",
+    "previewImage": "/images/google-ai-search-day.webp",
+    "publishedAt": "2026-10-02",
+    "sections": [
+      {
+        "heading": "The August update made the question more concrete",
+        "paragraphs": [
+          "Google’s June announcement was updated on August 31 to describe worldwide rollout of AI-feature insights and site-owner controls. The announced view covers impressions, pages and countries; the control concerns whether a site may appear or ground the affected AI features.",
+          "That update date is not the original announcement date. This is a source analysis, not a test in a customer’s Search Console account. Availability described by Google does not establish that a particular service page appears."
+        ]
+      },
+      {
+        "heading": "An appearance is not a customer",
+        "paragraphs": [
+          "Consider a supplier whose guide appears for an informational question while its service page does not explain scope clearly. The impression is a reason to inspect those pages, not proof of buyer intent or return on advertising spend. The example is an editorial hypothesis, not a measured client case.",
+          "Keep Google’s reporting separate from observations in other assistants and from enquiries. Google describes the AI-use control as affecting the corresponding traffic and impressions, rather than an ordinary ranking lever outside those features. Choose a control for a documented business reason."
+        ]
+      },
+      {
+        "heading": "A useful thirty-minute review",
+        "paragraphs": [
+          "ACT by listing your important service pages, selecting a country and date range, and saving the initial report. Compare what each visible page explains with the questions your buyers ask. Record missing data instead of filling it with an estimated benefit.",
+          "For France, Sweden, Finland, the UK, the US or Slovenia, use the actual market and query language rather than assuming English covers every buyer. WATCH changes against the same baseline and qualified-enquiry definition. PASS on treating worldwide feature rollout as worldwide demand for your service."
+        ]
+      }
+    ],
+    "service": {
+      "label": "See the AI visibility audit",
+      "reason": "The GEO audit uses public sources to define a query, page and market baseline. Reviewing your own Search Console report is an optional separate step; account access or private report analysis is not included in that public-only package. No assistant placement or sales lift is promised.",
+      "url": "https://vkvstudio.com/en/services/geo-audit/"
+    },
+    "slug": "google-ai-search-controls-and-insights",
+    "sources": [
+      {
+        "label": "Google: New opportunities, control and insights for website owners (updated August 31, 2026)",
+        "url": "https://blog.google/products-and-platforms/products/search/new-controls-website-owners/"
+      },
+      {
+        "label": "Google Search Central: generative AI performance reports in Search Console",
+        "url": "https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports"
+      },
+      {
+        "label": "Google Search Central: AI features and your website",
+        "url": "https://developers.google.com/search/docs/appearance/ai-features"
+      }
+    ],
+    "takeaway": "ACT: compare a small set of service pages with the announced Google AI-feature insights. WATCH the resulting baseline; an impression is not a citation, qualified enquiry or sale.",
+    "title": "AI Search now has a clearer baseline. It still needs a business question."
+  },
+  {
+    "art": "nemotron",
+    "author": "Valerii Karpov",
+    "canonicalUrl": "https://vkvstudio.pro/briefings/nemotron-active-parameters-are-not-memory/",
+    "category": "Update · local AI",
+    "checkedAt": "2026-10-01",
+    "dek": "NVIDIA’s Nemotron 3.5 Lightning has 30B total and 3B active parameters. The smaller active figure does not tell a buyer how much memory, hosting or support the deployment needs.",
+    "eventDate": "2026-08-11",
+    "evidence": "NVIDIA’s August 11 model card states 30B total and 3B active parameters and OpenMDW 1.1 terms. Ollama lists builds with different formats and sizes. We have not run this model; catalogue sizes are not runtime measurements.",
+    "evidenceStatus": "source",
+    "facts": "NVIDIA’s August 11 model card states 30B total and 3B active parameters and OpenMDW 1.1 terms. Ollama lists builds with different formats and sizes. We have not run this model; catalogue sizes are not runtime measurements.",
+    "interpretation": "For France, Sweden, Finland, the UK, the US and Slovenia, test the actual document and question languages. The model card names French and English among its declared use-case languages; omission of Swedish, Finnish or Slovenian from that list is not proof that they are unsupported.\n\nReview the actual OpenMDW 1.1 licence and distribution plan separately from technical fit. Ask for the hardware tier, selected model format, support responsibility and recurring costs. Those are proposal inputs, not a measured quotation in this briefing.",
+    "language": "en",
+    "limits": "No throughput, answer quality, minimum host size or cost saving is established for a VKV or client deployment. Declared language coverage is not a tested quality guarantee in every market.",
+    "mediaRights": "The 48 section scenes and paired Studio workbench are documented staged generated illustrations, not factual photographs or test screenshots. Provenance/rights evidence for the original article covers, OG derivatives, logo and remaining shipped artwork is incomplete. This content-only export records that unresolved state; it is not a media-rights certification or public release approval.",
+    "minutes": 3,
+    "practicalDecision": "WATCH until a local model passes the real workload on the proposed machine. ACT on total memory, language, licence and recurring cost. PASS on choosing a host from the “3B active” headline alone.",
+    "previewImage": "/images/nemotron-day.webp",
+    "publishedAt": "2026-10-02",
+    "sections": [
+      {
+        "heading": "The attractive part of the announcement",
+        "paragraphs": [
+          "NVIDIA describes a model using a subset of its total parameters for each generated token. That active subset concerns part of the computation; it does not remove the remaining weights from the deployment.",
+          "A buyer still pays for a usable host, storage, runtime memory and operations. Listed model-file sizes differ by format. Neither a parameter headline nor a download size measures the memory and response time of your full assistant."
+        ]
+      },
+      {
+        "heading": "Fit is more than memory",
+        "paragraphs": [
+          "For France, Sweden, Finland, the UK, the US and Slovenia, test the actual document and question languages. The model card names French and English among its declared use-case languages; omission of Swedish, Finnish or Slovenian from that list is not proof that they are unsupported.",
+          "Review the actual OpenMDW 1.1 licence and distribution plan separately from technical fit. Ask for the hardware tier, selected model format, support responsibility and recurring costs. Those are proposal inputs, not a measured quotation in this briefing."
+        ]
+      },
+      {
+        "heading": "What to test before switching",
+        "paragraphs": [
+          "ACT by comparing the proposed model with the existing approach on the same document questions. Check source-grounded answers, missing-evidence responses, your languages, memory and response time under the intended number of users. Name acceptance limits before the trial.",
+          "WATCH if a larger host or additional operational work is needed without a demonstrated benefit. For assistants using tools, also test missing or hostile tool results and enforce permissions outside the model. PASS on replacing a working system solely because a new model was announced."
+        ]
+      }
+    ],
+    "service": {
+      "label": "Explore on-prem AI",
+      "reason": "The on-prem AI scope is relevant when the task needs a private model and a defined operating boundary. Agree documents, languages, workload, hardware and acceptance cases before selecting a larger host.",
+      "url": "https://vkvstudio.com/en/services/on-prem-ai/"
+    },
+    "slug": "nemotron-active-parameters-are-not-memory",
+    "sources": [
+      {
+        "label": "NVIDIA: Nemotron 3.5 Lightning model card, August 11, 2026",
+        "url": "https://build.nvidia.com/nvidia/nemotron-3.5-lightning-30b-a3b/modelcard"
+      },
+      {
+        "label": "Ollama: NVIDIA Nemotron 3.5 Lightning",
+        "url": "https://ollama.com/blog/nemotron-3-5-lightning"
+      },
+      {
+        "label": "Ollama: Nemotron 3.5 Lightning model tags and sizes",
+        "url": "https://ollama.com/library/nemotron-3.5-lightning/tags"
+      }
+    ],
+    "takeaway": "WATCH until a local model passes the real workload on the proposed machine. ACT on total memory, language, licence and recurring cost. PASS on choosing a host from the “3B active” headline alone.",
+    "title": "Budget a local AI model for the machine it needs."
+  },
+  {
+    "art": "shieldstral",
+    "author": "Valerii Karpov",
+    "canonicalUrl": "https://vkvstudio.pro/briefings/shieldstral-is-a-guardrail-candidate/",
+    "category": "Update · local AI",
+    "checkedAt": "2026-10-01",
+    "dek": "Mistral’s Shieldstral checks content against a supplied policy. For a private assistant, the buying decision depends on the policy, missed problems, false alarms and operating cost.",
+    "eventDate": "2026-08-04",
+    "evidence": "Mistral’s August 4 release describes an open-weights text-and-image safety model with policy input and Apache 2.0 licensing. The vendor states a single-16GB-GPU deployment profile. No VKV benchmark or integration is claimed.",
+    "evidenceStatus": "source",
+    "facts": "Mistral’s August 4 release describes an open-weights text-and-image safety model with policy input and Apache 2.0 licensing. The vendor states a single-16GB-GPU deployment profile. No VKV benchmark or integration is claimed.",
+    "interpretation": "The release gives a 16GB GPU deployment profile. Ask an engineer to check the actual hardware, workload, additional response delay and running cost. Other hardware or smaller model formats require their own evaluation; “local” does not mean cost-free.\n\nChoose the fallback before a trial. If the safety check is missing or uncertain, a required check must not be silently skipped. Depending on the task, the fallback may block the answer or send it to a person rather than continue automatically.",
+    "language": "en",
+    "limits": "That vendor hardware profile is not a measured minimum for every setup. We have not measured response time, missed problems or legitimate questions rejected on a client’s hardware or languages.",
+    "mediaRights": "The 48 section scenes and paired Studio workbench are documented staged generated illustrations, not factual photographs or test screenshots. Provenance/rights evidence for the original article covers, OG derivatives, logo and remaining shipped artwork is incomplete. This content-only export records that unresolved state; it is not a media-rights certification or public release approval.",
+    "minutes": 3,
+    "practicalDecision": "WATCH until a safety model is tested on your policy and target languages. ACT first on permissions and a clear failure path. PASS on treating a model’s safety score as authority to read data or take an action.",
+    "previewImage": "/images/shieldstral-day.webp",
+    "publishedAt": "2026-10-02",
+    "sections": [
+      {
+        "heading": "A policy can travel with the request",
+        "paragraphs": [
+          "Shieldstral is intended to assess text and images against a supplied policy. A private assistant could use that check before answering a request and before returning a response. This is a proposed use, not an integration result.",
+          "The policy has to describe the business boundary: which documents a person may access, which requests must stop, and when a reviewer is needed. A published vendor benchmark does not establish whether your legitimate customer questions will be accepted."
+        ]
+      },
+      {
+        "heading": "Local does not mean free of constraints",
+        "paragraphs": [
+          "The release gives a 16GB GPU deployment profile. Ask an engineer to check the actual hardware, workload, additional response delay and running cost. Other hardware or smaller model formats require their own evaluation; “local” does not mean cost-free.",
+          "Choose the fallback before a trial. If the safety check is missing or uncertain, a required check must not be silently skipped. Depending on the task, the fallback may block the answer or send it to a person rather than continue automatically."
+        ]
+      },
+      {
+        "heading": "Where it fits in a business decision",
+        "paragraphs": [
+          "ACT by writing allowed, disallowed and ambiguous examples from the real task. Include the languages your buyers use, long requests and attempts to disguise restricted content. Record both missed problems and legitimate questions wrongly blocked, along with operating cost.",
+          "WATCH until those results justify another model. Keep document permissions and action controls in the server even after a successful trial. The classifier may inform a decision; it cannot give a user new access rights."
+        ]
+      }
+    ],
+    "service": {
+      "label": "Explore on-prem AI",
+      "reason": "If your assistant must operate with a private data boundary, review the on-prem AI scope and discuss the target workload, permitted users, hardware and fallback. A safety classifier is one candidate component, not the complete service.",
+      "url": "https://vkvstudio.com/en/services/on-prem-ai/"
+    },
+    "slug": "shieldstral-is-a-guardrail-candidate",
+    "sources": [
+      {
+        "label": "Mistral: Introducing Shieldstral, August 4, 2026",
+        "url": "https://mistral.ai/news/shieldstral/"
+      },
+      {
+        "label": "Mistral: Shieldstral model documentation",
+        "url": "https://docs.mistral.ai/models/shieldstral-1-0"
+      }
+    ],
+    "takeaway": "WATCH until a safety model is tested on your policy and target languages. ACT first on permissions and a clear failure path. PASS on treating a model’s safety score as authority to read data or take an action.",
+    "title": "Before adding a safety model, decide what failure must block."
+  },
+  {
+    "art": "sponsored-agents",
+    "author": "Valerii Karpov",
+    "canonicalUrl": "https://vkvstudio.pro/briefings/sponsored-agents-are-still-ads/",
+    "category": "Update · AI commerce",
+    "checkedAt": "2026-10-01",
+    "dek": "OpenAI is testing Sponsored Agents with select US advertisers while expanding ChatGPT Ads internationally. Paid brand conversations and independent answers are different channels.",
+    "eventDate": "2026-09-16",
+    "evidence": "OpenAI’s September 16 announcement describes a test with select US advertisers in which a user may start a clearly labelled brand conversation after clicking a ChatGPT ad. We have not run a campaign or observed advertiser results.",
+    "evidenceStatus": "source",
+    "facts": "OpenAI’s September 16 announcement describes a test with select US advertisers in which a user may start a clearly labelled brand conversation after clicking a ChatGPT ad. We have not run a campaign or observed advertiser results.",
+    "interpretation": "A paid brand conversation and a source cited in an independent answer have different origins. Keep their budgets, disclosure and measurements separate. Combining them into one “AI visibility” number can hide what the business actually bought.\n\nFor a future paid test, define a qualified enquiry, the handoff to a person and a spending limit. For organic visibility, record owned pages, dated questions, markets and observed citations. Neither an impression nor an opened conversation is a sale.",
+    "language": "en",
+    "limits": "The September 23 expansion of ChatGPT Ads does not establish that Sponsored Agents are available outside the initial US test, or that a campaign would perform well. Paid placement does not influence ChatGPT’s independent answers.",
+    "mediaRights": "The 48 section scenes and paired Studio workbench are documented staged generated illustrations, not factual photographs or test screenshots. Provenance/rights evidence for the original article covers, OG derivatives, logo and remaining shipped artwork is incomplete. This content-only export records that unresolved state; it is not a media-rights certification or public release approval.",
+    "minutes": 3,
+    "practicalDecision": "WATCH Sponsored Agents unless your business is eligible for the announced select-US test. PASS on “organic ChatGPT placement” promises based on an ad pilot. Paid and independent-answer visibility need separate measures.",
+    "previewImage": "/images/sponsored-agents-day.webp",
+    "publishedAt": "2026-10-02",
+    "sections": [
+      {
+        "heading": "What OpenAI announced",
+        "paragraphs": [
+          "OpenAI’s September 16 announcement describes Sponsored Agents as a test with select US advertisers: a user clicks an ad and may enter a labelled brand conversation. The paid conversation is separate from ChatGPT’s independent answer. No VKV campaign or advertiser result is reported.",
+          "A September 23 announcement described broader international ChatGPT Ads availability. Access to that ad platform does not establish access to the Sponsored Agents format, nor a campaign outcome. Check eligibility for the exact format, not just the platform name."
+        ]
+      },
+      {
+        "heading": "Keep paid and organic claims apart",
+        "paragraphs": [
+          "A paid brand conversation and a source cited in an independent answer have different origins. Keep their budgets, disclosure and measurements separate. Combining them into one “AI visibility” number can hide what the business actually bought.",
+          "For a future paid test, define a qualified enquiry, the handoff to a person and a spending limit. For organic visibility, record owned pages, dated questions, markets and observed citations. Neither an impression nor an opened conversation is a sale."
+        ]
+      },
+      {
+        "heading": "What a business can do now",
+        "paragraphs": [
+          "WATCH in France, Sweden, Finland, the UK and Slovenia: the source cited here does not establish Sponsored Agents access in those markets. In the US, WATCH unless the exact advertiser eligibility is confirmed. This is a dated source description, not a live account-availability check.",
+          "ACT on clear product facts and a reachable human contact path. PASS on a supplier presenting this paid pilot as guaranteed independent-answer placement. If a paid trial becomes available, compare qualified enquiries against your own baseline rather than adopting someone else’s campaign results."
+        ]
+      }
+    ],
+    "service": {
+      "label": "See the AI visibility audit",
+      "reason": "The AI visibility audit concerns your owned pages and an agreed organic baseline. It is not a Sponsored Agents campaign or advertising-placement service.",
+      "url": "https://vkvstudio.com/en/services/geo-audit/"
+    },
+    "slug": "sponsored-agents-are-still-ads",
+    "sources": [
+      {
+        "label": "OpenAI: Reimagining advertising with AI, September 16, 2026",
+        "url": "https://openai.com/index/reimagining-advertising-with-ai/"
+      },
+      {
+        "label": "OpenAI: ChatGPT Ads expands to Southeast Asia and Taiwan, September 23, 2026",
+        "url": "https://openai.com/index/chatgpt-ads-expands-southeast-asia-taiwan/"
+      }
+    ],
+    "takeaway": "WATCH Sponsored Agents unless your business is eligible for the announced select-US test. PASS on “organic ChatGPT placement” promises based on an ad pilot. Paid and independent-answer visibility need separate measures.",
+    "title": "A conversation after an ad is still an ad."
+  },
+  {
+    "art": "performance-cache",
+    "author": "Valerii Karpov",
+    "canonicalUrl": "https://vkvstudio.pro/briefings/the-hundred-and-the-cache/",
+    "category": "Field note · performance",
+    "checkedAt": "2026-10-01",
+    "dek": "A homepage speed investigation became a lesson in measuring the deployed site, not just the local build.",
+    "eventDate": null,
+    "evidence": "The author’s build log records a video reduction from 25.7 MB to 6.6 MB, a stale cache response and a later lab result. The linked September 27 report is historical; this briefing has not independently rerun that experiment.",
+    "evidenceStatus": "ours",
+    "facts": "The author’s build log records a video reduction from 25.7 MB to 6.6 MB, a stale cache response and a later lab result. The linked September 27 report is historical; this briefing has not independently rerun that experiment.",
+    "interpretation": "The log records a hero video changing from 25.7 MB to 6.6 MB. The first deployment still delivered the older file because the CDN—the service caching files near visitors—kept its previous URL. A versioned filename addressed that cache mismatch.\n\nThe reported random-seek timings are a limited comparison, not proof of equal playback quality. An HTTP 206 response means partial file delivery; it does not prove smooth scrolling on every device. The lab scores describe that dated run, not today’s whole site.",
+    "language": "en",
+    "limits": "No visitor field data or conversion study is supplied. Raw trace files, repeat counts and the full random-seek test setup are not attached. Current service-page scores and this dated log may describe different versions.",
+    "mediaRights": "The 48 section scenes and paired Studio workbench are documented staged generated illustrations, not factual photographs or test screenshots. Provenance/rights evidence for the original article covers, OG derivatives, logo and remaining shipped artwork is incomplete. This content-only export records that unresolved state; it is not a media-rights certification or public release approval.",
+    "minutes": 3,
+    "practicalDecision": "ACT: ask for the delivered URL, device profile, date and actual file response before accepting a speed claim. This case is a dated author account, not a promise of a score or conversion gain.",
+    "previewImage": "/images/performance-cache-day.webp",
+    "publishedAt": "2026-10-02",
+    "sections": [
+      {
+        "heading": "The first screen looked finished. The trace disagreed.",
+        "paragraphs": [
+          "The author’s homepage investigation found that an entrance animation kept a ready headline invisible. A loading score can therefore reflect how the opening is revealed, as well as how quickly its files arrive. The reported change kept the visual sequence while adjusting when the text became visible.",
+          "For a buyer, the acceptance question is concrete: can someone read the offer on the first screen while the visual experience loads? Ask for the tested page and conditions. A source-code change alone is not evidence of the delivered experience."
+        ]
+      },
+      {
+        "heading": "The local file got smaller. The live file did not.",
+        "paragraphs": [
+          "The log records a hero video changing from 25.7 MB to 6.6 MB. The first deployment still delivered the older file because the CDN—the service caching files near visitors—kept its previous URL. A versioned filename addressed that cache mismatch.",
+          "The reported random-seek timings are a limited comparison, not proof of equal playback quality. An HTTP 206 response means partial file delivery; it does not prove smooth scrolling on every device. The lab scores describe that dated run, not today’s whole site."
+        ]
+      },
+      {
+        "heading": "What a business owner should take from it",
+        "paragraphs": [
+          "ACT when a visual site is being built or accepted. Record the URL, date, mobile and desktop profiles, actual asset version and any available visitor data. Ask the engineer to show the response received from the deployed site, then inspect reading and navigation on a phone.",
+          "PASS on a redesign driven only by a score screenshot. Agree what must remain readable and interactive, what is being measured, and what counts as failure before buying further visual work. No sales improvement is established by this case."
+        ]
+      }
+    ],
+    "service": {
+      "label": "Explore website engineering",
+      "reason": "For a video-led or visually ambitious website, discuss acceptance on the delivered first screen, navigation and real asset responses. This case does not promise your site the same score.",
+      "url": "https://vkvstudio.com/en/services/websites/"
+    },
+    "slug": "the-hundred-and-the-cache",
+    "sources": [
+      {
+        "label": "VKV Studio build log: The hundred the cache would not give us",
+        "url": "https://vkvstudio.com/en/log/"
+      },
+      {
+        "label": "PageSpeed Insights report, September 27, 2026",
+        "url": "https://pagespeed.web.dev/analysis/https-vkvstudio-com/w5la5p2ntq?form_factor=mobile"
+      },
+      {
+        "label": "Google: how PageSpeed Insights separates lab and field data",
+        "url": "https://developers.google.com/speed/docs/insights/v5/about"
+      }
+    ],
+    "takeaway": "ACT: ask for the delivered URL, device profile, date and actual file response before accepting a speed claim. This case is a dated author account, not a promise of a score or conversion gain.",
+    "title": "A perfect score was not the point. The bytes visitors received were."
+  },
+  {
+    "art": "phone-mobile",
+    "author": "Valerii Karpov",
+    "canonicalUrl": "https://vkvstudio.pro/briefings/the-phone-saw-a-different-site/",
+    "category": "Field note · mobile UX",
+    "checkedAt": "2026-10-01",
+    "dek": "Three screenshots exposed a visual experience that a desktop review—and passing layout tests—had missed.",
+    "eventDate": null,
+    "evidence": "A first-person account in the VKV Studio build log records three screenshots from the author’s own phone and the fixes made to the homepage, assistant mark and log spacing.",
+    "evidenceStatus": "ours",
+    "facts": "A first-person account in the VKV Studio build log records three screenshots from the author’s own phone and the fixes made to the homepage, assistant mark and log spacing.",
+    "interpretation": "The account describes a calmer surface behind mobile text, a plain image replacing the runtime-drawn mark, and removal of unnecessary top spacing. An earlier code change had been overridden by a later CSS rule; another phone review exposed the remaining problem.\n\nA developer’s test result and a reader’s experience answer different questions. Keep both in acceptance: repeat the relevant code checks, then inspect the actual page on the target device. A screenshot should name its URL, date, browser and viewport.",
+    "language": "en",
+    "limits": "This is an internal author account, not a usability study or conversion measurement. The source does not attach the phone/browser configuration, a repeatable device matrix or raw before-and-after evidence.",
+    "mediaRights": "The 48 section scenes and paired Studio workbench are documented staged generated illustrations, not factual photographs or test screenshots. Provenance/rights evidence for the original article covers, OG derivatives, logo and remaining shipped artwork is incomplete. This content-only export records that unresolved state; it is not a media-rights certification or public release approval.",
+    "minutes": 2,
+    "practicalDecision": "ACT: read the opening, navigation, one article and the contact path on a real phone before accepting a site. Passing desktop layout tests is only one part of that review.",
+    "previewImage": "/images/phone-mobile-day.webp",
+    "publishedAt": "2026-10-02",
+    "sections": [
+      {
+        "heading": "Three screenshots changed the priority list",
+        "paragraphs": [
+          "The author’s August 16 build log records three mobile problems: text competing with the hero video, an assistant mark failing to draw, and empty space inherited from a desktop layout. The desktop view had hidden their combined effect on the opening and reading path.",
+          "These observations concern the author’s own site. They do not establish how many customers encountered a problem or how much revenue it cost. They do identify a useful buyer question: what does the delivered site actually let a phone visitor read and do?"
+        ]
+      },
+      {
+        "heading": "Fix the experience, then verify the fix",
+        "paragraphs": [
+          "The account describes a calmer surface behind mobile text, a plain image replacing the runtime-drawn mark, and removal of unnecessary top spacing. An earlier code change had been overridden by a later CSS rule; another phone review exposed the remaining problem.",
+          "A developer’s test result and a reader’s experience answer different questions. Keep both in acceptance: repeat the relevant code checks, then inspect the actual page on the target device. A screenshot should name its URL, date, browser and viewport."
+        ]
+      },
+      {
+        "heading": "A useful review question",
+        "paragraphs": [
+          "ACT for a site with a strong visual opening, a mobile enquiry path or long reading pages. Open the first screen, follow the menu, read an article and reach the contact options on a real phone. Check that the brand and offer remain visible and that the next step can be reached without guessing.",
+          "PASS on extrapolating this account into a conversion claim. Agree the intended devices and acceptance cases with the supplier; record unresolved problems rather than treating one successful phone as universal coverage."
+        ]
+      }
+    ],
+    "service": {
+      "label": "Explore website engineering",
+      "reason": "For an existing mobile reading or navigation problem, start with a scoped review of the delivered pages and named devices. The website service scope remains on VKVstudio.com.",
+      "url": "https://vkvstudio.com/en/services/websites/"
+    },
+    "slug": "the-phone-saw-a-different-site",
+    "sources": [
+      {
+        "label": "VKV Studio build log: The phone was seeing a different site",
+        "url": "https://vkvstudio.com/en/log/"
+      }
+    ],
+    "takeaway": "ACT: read the opening, navigation, one article and the contact path on a real phone before accepting a site. Passing desktop layout tests is only one part of that review.",
+    "title": "The phone was seeing a different site."
+  }
+]

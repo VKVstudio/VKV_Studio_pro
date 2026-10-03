@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { studioLink } from '~/utils/studio-links';
 import { canonicalUrl } from '~/data/articles';
 import { editorialProfileSchema, serializeEditorialSchema } from '~/utils/editorial-schema';
 import markets from '~/data/markets.json';

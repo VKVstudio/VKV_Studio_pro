@@ -1,0 +1,65 @@
+{
+  "approval": {
+    "approvedAt": "2026-10-02T22:24:49+00:00",
+    "approvedBy": "Valerii Karpov",
+    "contentSha256": "f36cb05f058ee5f65751ba690f27e4af6dab5da6bafba84ca14033fc2d5a9f4d"
+  },
+  "article": {
+    "art": "phone-mobile",
+    "author": "Valerii Karpov",
+    "canonicalUrl": "https://vkvstudio.pro/briefings/the-phone-saw-a-different-site/",
+    "category": "Field note · mobile UX",
+    "checkedAt": "2026-10-01",
+    "dek": "Three screenshots exposed a visual experience that a desktop review—and passing layout tests—had missed.",
+    "eventDate": null,
+    "evidence": "A first-person account in the VKV Studio build log records three screenshots from the author’s own phone and the fixes made to the homepage, assistant mark and log spacing.",
+    "evidenceStatus": "ours",
+    "facts": "A first-person account in the VKV Studio build log records three screenshots from the author’s own phone and the fixes made to the homepage, assistant mark and log spacing.",
+    "interpretation": "The account describes a calmer surface behind mobile text, a plain image replacing the runtime-drawn mark, and removal of unnecessary top spacing. An earlier code change had been overridden by a later CSS rule; another phone review exposed the remaining problem.\n\nA developer’s test result and a reader’s experience answer different questions. Keep both in acceptance: repeat the relevant code checks, then inspect the actual page on the target device. A screenshot should name its URL, date, browser and viewport.",
+    "language": "en",
+    "limits": "This is an internal author account, not a usability study or conversion measurement. The source does not attach the phone/browser configuration, a repeatable device matrix or raw before-and-after evidence.",
+    "mediaRights": "The 48 section scenes and paired Studio workbench are documented staged generated illustrations, not factual photographs or test screenshots. Provenance/rights evidence for the original article covers, OG derivatives, logo and remaining shipped artwork is incomplete. This content-only export records that unresolved state; it is not a media-rights certification or public release approval.",
+    "minutes": 2,
+    "practicalDecision": "ACT: read the opening, navigation, one article and the contact path on a real phone before accepting a site. Passing desktop layout tests is only one part of that review.",
+    "previewImage": "/images/phone-mobile-day.webp",
+    "publishedAt": "2026-10-02",
+    "sections": [
+      {
+        "heading": "Three screenshots changed the priority list",
+        "paragraphs": [
+          "The author’s August 16 build log records three mobile problems: text competing with the hero video, an assistant mark failing to draw, and empty space inherited from a desktop layout. The desktop view had hidden their combined effect on the opening and reading path.",
+          "These observations concern the author’s own site. They do not establish how many customers encountered a problem or how much revenue it cost. They do identify a useful buyer question: what does the delivered site actually let a phone visitor read and do?"
+        ]
+      },
+      {
+        "heading": "Fix the experience, then verify the fix",
+        "paragraphs": [
+          "The account describes a calmer surface behind mobile text, a plain image replacing the runtime-drawn mark, and removal of unnecessary top spacing. An earlier code change had been overridden by a later CSS rule; another phone review exposed the remaining problem.",
+          "A developer’s test result and a reader’s experience answer different questions. Keep both in acceptance: repeat the relevant code checks, then inspect the actual page on the target device. A screenshot should name its URL, date, browser and viewport."
+        ]
+      },
+      {
+        "heading": "A useful review question",
+        "paragraphs": [
+          "ACT for a site with a strong visual opening, a mobile enquiry path or long reading pages. Open the first screen, follow the menu, read an article and reach the contact options on a real phone. Check that the brand and offer remain visible and that the next step can be reached without guessing.",
+          "PASS on extrapolating this account into a conversion claim. Agree the intended devices and acceptance cases with the supplier; record unresolved problems rather than treating one successful phone as universal coverage."
+        ]
+      }
+    ],
+    "service": {
+      "label": "Explore website engineering",
+      "reason": "For an existing mobile reading or navigation problem, start with a scoped review of the delivered pages and named devices. The website service scope remains on VKVstudio.com.",
+      "url": "https://vkvstudio.com/en/services/websites/"
+    },
+    "slug": "the-phone-saw-a-different-site",
+    "sources": [
+      {
+        "label": "VKV Studio build log: The phone was seeing a different site",
+        "url": "https://vkvstudio.com/en/log/"
+      }
+    ],
+    "takeaway": "ACT: read the opening, navigation, one article and the contact path on a real phone before accepting a site. Passing desktop layout tests is only one part of that review.",
+    "title": "The phone was seeing a different site."
+  },
+  "schemaVersion": 2
+}

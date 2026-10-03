@@ -1,6 +1,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { spawnSync } from 'node:child_process';
+import { mkdtemp, mkdir } from 'node:fs/promises';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
 import { articles } from '../app/data/preview-articles.ts';
 import { validateExport, digest, canonical } from '../../contracts/article-export.mjs';
 import { loadApprovedArticles, validateReleaseApproval } from './editorial-ingestion.mjs';
@@ -30,7 +33,9 @@ test('release approval binds the complete exported collection', () => {
   assert.throws(() => validateReleaseApproval({ approvedBy: 'Valerii Karpov', contentSha256: digest(collection) }, [...collection, fixture().article]));
 });
 test('empty approved collection never falls back to preview during public build', async () => {
-  await assert.rejects(loadApprovedArticles(new URL('../', import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1')), /requires backend-approved/);
+  const emptyFrontend = await mkdtemp(join(tmpdir(), 'vkv-empty-approval-'));
+  await mkdir(join(emptyFrontend, 'content/approved'), { recursive: true });
+  await assert.rejects(loadApprovedArticles(emptyFrontend), /requires backend-approved/);
 });
 test('Python backend and JavaScript boundary use the same canonical Unicode JSON', () => {
   const data = fixture().article;

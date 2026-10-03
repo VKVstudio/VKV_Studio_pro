@@ -29,7 +29,7 @@ onBeforeUnmount(() => {
 
 <template>
   <article :class="featured ? 'feature-card' : 'upcoming-card'">
-    <NuxtLink :to="articlePath(article.slug)" :class="featured ? 'feature-card__visual teaser-visual' : 'upcoming-card__visual teaser-visual'" :aria-label="`Read: ${article.title}`">
+    <NuxtLink :to="articlePath(article.slug)" :class="featured ? 'feature-card__visual teaser-visual' : 'upcoming-card__visual teaser-visual'" :aria-label="`${featured ? 'SIGNAL / EVIDENCE / DECISION — ' : ''}Read: ${article.title}`">
       <span ref="artElement" :class="featured || artReady ? `theme-art theme-art--${article.art}` : 'theme-art'" aria-hidden="true"></span>
       <span v-if="featured" class="feature-card__art-label" aria-hidden="true">SIGNAL / EVIDENCE / DECISION</span>
     </NuxtLink>

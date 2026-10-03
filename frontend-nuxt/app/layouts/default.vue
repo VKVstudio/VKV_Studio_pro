@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { studioLink } from '~/utils/studio-links';
+import ThemeSelect from '~/components/ThemeSelect.vue';
 const publicRelease = useAppConfig().publicRelease === true;
 const studioOrigin = useAppConfig().studioPreviewOrigin;
 const motionPaused = useState('editorial-motion-paused', () => false);

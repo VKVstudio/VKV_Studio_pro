@@ -1,0 +1,73 @@
+{
+  "approval": {
+    "approvedAt": "2026-10-02T22:24:48+00:00",
+    "approvedBy": "Valerii Karpov",
+    "contentSha256": "1fcd3e820caaaec63d4e2a1a992c12f130b106201accf82d91f6f56dfe420835"
+  },
+  "article": {
+    "art": "performance-cache",
+    "author": "Valerii Karpov",
+    "canonicalUrl": "https://vkvstudio.pro/briefings/the-hundred-and-the-cache/",
+    "category": "Field note · performance",
+    "checkedAt": "2026-10-01",
+    "dek": "A homepage speed investigation became a lesson in measuring the deployed site, not just the local build.",
+    "eventDate": null,
+    "evidence": "The author’s build log records a video reduction from 25.7 MB to 6.6 MB, a stale cache response and a later lab result. The linked September 27 report is historical; this briefing has not independently rerun that experiment.",
+    "evidenceStatus": "ours",
+    "facts": "The author’s build log records a video reduction from 25.7 MB to 6.6 MB, a stale cache response and a later lab result. The linked September 27 report is historical; this briefing has not independently rerun that experiment.",
+    "interpretation": "The log records a hero video changing from 25.7 MB to 6.6 MB. The first deployment still delivered the older file because the CDN—the service caching files near visitors—kept its previous URL. A versioned filename addressed that cache mismatch.\n\nThe reported random-seek timings are a limited comparison, not proof of equal playback quality. An HTTP 206 response means partial file delivery; it does not prove smooth scrolling on every device. The lab scores describe that dated run, not today’s whole site.",
+    "language": "en",
+    "limits": "No visitor field data or conversion study is supplied. Raw trace files, repeat counts and the full random-seek test setup are not attached. Current service-page scores and this dated log may describe different versions.",
+    "mediaRights": "The 48 section scenes and paired Studio workbench are documented staged generated illustrations, not factual photographs or test screenshots. Provenance/rights evidence for the original article covers, OG derivatives, logo and remaining shipped artwork is incomplete. This content-only export records that unresolved state; it is not a media-rights certification or public release approval.",
+    "minutes": 3,
+    "practicalDecision": "ACT: ask for the delivered URL, device profile, date and actual file response before accepting a speed claim. This case is a dated author account, not a promise of a score or conversion gain.",
+    "previewImage": "/images/performance-cache-day.webp",
+    "publishedAt": "2026-10-02",
+    "sections": [
+      {
+        "heading": "The first screen looked finished. The trace disagreed.",
+        "paragraphs": [
+          "The author’s homepage investigation found that an entrance animation kept a ready headline invisible. A loading score can therefore reflect how the opening is revealed, as well as how quickly its files arrive. The reported change kept the visual sequence while adjusting when the text became visible.",
+          "For a buyer, the acceptance question is concrete: can someone read the offer on the first screen while the visual experience loads? Ask for the tested page and conditions. A source-code change alone is not evidence of the delivered experience."
+        ]
+      },
+      {
+        "heading": "The local file got smaller. The live file did not.",
+        "paragraphs": [
+          "The log records a hero video changing from 25.7 MB to 6.6 MB. The first deployment still delivered the older file because the CDN—the service caching files near visitors—kept its previous URL. A versioned filename addressed that cache mismatch.",
+          "The reported random-seek timings are a limited comparison, not proof of equal playback quality. An HTTP 206 response means partial file delivery; it does not prove smooth scrolling on every device. The lab scores describe that dated run, not today’s whole site."
+        ]
+      },
+      {
+        "heading": "What a business owner should take from it",
+        "paragraphs": [
+          "ACT when a visual site is being built or accepted. Record the URL, date, mobile and desktop profiles, actual asset version and any available visitor data. Ask the engineer to show the response received from the deployed site, then inspect reading and navigation on a phone.",
+          "PASS on a redesign driven only by a score screenshot. Agree what must remain readable and interactive, what is being measured, and what counts as failure before buying further visual work. No sales improvement is established by this case."
+        ]
+      }
+    ],
+    "service": {
+      "label": "Explore website engineering",
+      "reason": "For a video-led or visually ambitious website, discuss acceptance on the delivered first screen, navigation and real asset responses. This case does not promise your site the same score.",
+      "url": "https://vkvstudio.com/en/services/websites/"
+    },
+    "slug": "the-hundred-and-the-cache",
+    "sources": [
+      {
+        "label": "VKV Studio build log: The hundred the cache would not give us",
+        "url": "https://vkvstudio.com/en/log/"
+      },
+      {
+        "label": "PageSpeed Insights report, September 27, 2026",
+        "url": "https://pagespeed.web.dev/analysis/https-vkvstudio-com/w5la5p2ntq?form_factor=mobile"
+      },
+      {
+        "label": "Google: how PageSpeed Insights separates lab and field data",
+        "url": "https://developers.google.com/speed/docs/insights/v5/about"
+      }
+    ],
+    "takeaway": "ACT: ask for the delivered URL, device profile, date and actual file response before accepting a speed claim. This case is a dated author account, not a promise of a score or conversion gain.",
+    "title": "A perfect score was not the point. The bytes visitors received were."
+  },
+  "schemaVersion": 2
+}

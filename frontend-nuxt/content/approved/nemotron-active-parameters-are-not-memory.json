@@ -1,0 +1,73 @@
+{
+  "approval": {
+    "approvedAt": "2026-10-02T22:24:52+00:00",
+    "approvedBy": "Valerii Karpov",
+    "contentSha256": "49baa3d8799f5ee50b226ec3075a32b041db7e725948d675ab10e6df894da12e"
+  },
+  "article": {
+    "art": "nemotron",
+    "author": "Valerii Karpov",
+    "canonicalUrl": "https://vkvstudio.pro/briefings/nemotron-active-parameters-are-not-memory/",
+    "category": "Update · local AI",
+    "checkedAt": "2026-10-01",
+    "dek": "NVIDIA’s Nemotron 3.5 Lightning has 30B total and 3B active parameters. The smaller active figure does not tell a buyer how much memory, hosting or support the deployment needs.",
+    "eventDate": "2026-08-11",
+    "evidence": "NVIDIA’s August 11 model card states 30B total and 3B active parameters and OpenMDW 1.1 terms. Ollama lists builds with different formats and sizes. We have not run this model; catalogue sizes are not runtime measurements.",
+    "evidenceStatus": "source",
+    "facts": "NVIDIA’s August 11 model card states 30B total and 3B active parameters and OpenMDW 1.1 terms. Ollama lists builds with different formats and sizes. We have not run this model; catalogue sizes are not runtime measurements.",
+    "interpretation": "For France, Sweden, Finland, the UK, the US and Slovenia, test the actual document and question languages. The model card names French and English among its declared use-case languages; omission of Swedish, Finnish or Slovenian from that list is not proof that they are unsupported.\n\nReview the actual OpenMDW 1.1 licence and distribution plan separately from technical fit. Ask for the hardware tier, selected model format, support responsibility and recurring costs. Those are proposal inputs, not a measured quotation in this briefing.",
+    "language": "en",
+    "limits": "No throughput, answer quality, minimum host size or cost saving is established for a VKV or client deployment. Declared language coverage is not a tested quality guarantee in every market.",
+    "mediaRights": "The 48 section scenes and paired Studio workbench are documented staged generated illustrations, not factual photographs or test screenshots. Provenance/rights evidence for the original article covers, OG derivatives, logo and remaining shipped artwork is incomplete. This content-only export records that unresolved state; it is not a media-rights certification or public release approval.",
+    "minutes": 3,
+    "practicalDecision": "WATCH until a local model passes the real workload on the proposed machine. ACT on total memory, language, licence and recurring cost. PASS on choosing a host from the “3B active” headline alone.",
+    "previewImage": "/images/nemotron-day.webp",
+    "publishedAt": "2026-10-02",
+    "sections": [
+      {
+        "heading": "The attractive part of the announcement",
+        "paragraphs": [
+          "NVIDIA describes a model using a subset of its total parameters for each generated token. That active subset concerns part of the computation; it does not remove the remaining weights from the deployment.",
+          "A buyer still pays for a usable host, storage, runtime memory and operations. Listed model-file sizes differ by format. Neither a parameter headline nor a download size measures the memory and response time of your full assistant."
+        ]
+      },
+      {
+        "heading": "Fit is more than memory",
+        "paragraphs": [
+          "For France, Sweden, Finland, the UK, the US and Slovenia, test the actual document and question languages. The model card names French and English among its declared use-case languages; omission of Swedish, Finnish or Slovenian from that list is not proof that they are unsupported.",
+          "Review the actual OpenMDW 1.1 licence and distribution plan separately from technical fit. Ask for the hardware tier, selected model format, support responsibility and recurring costs. Those are proposal inputs, not a measured quotation in this briefing."
+        ]
+      },
+      {
+        "heading": "What to test before switching",
+        "paragraphs": [
+          "ACT by comparing the proposed model with the existing approach on the same document questions. Check source-grounded answers, missing-evidence responses, your languages, memory and response time under the intended number of users. Name acceptance limits before the trial.",
+          "WATCH if a larger host or additional operational work is needed without a demonstrated benefit. For assistants using tools, also test missing or hostile tool results and enforce permissions outside the model. PASS on replacing a working system solely because a new model was announced."
+        ]
+      }
+    ],
+    "service": {
+      "label": "Explore on-prem AI",
+      "reason": "The on-prem AI scope is relevant when the task needs a private model and a defined operating boundary. Agree documents, languages, workload, hardware and acceptance cases before selecting a larger host.",
+      "url": "https://vkvstudio.com/en/services/on-prem-ai/"
+    },
+    "slug": "nemotron-active-parameters-are-not-memory",
+    "sources": [
+      {
+        "label": "NVIDIA: Nemotron 3.5 Lightning model card, August 11, 2026",
+        "url": "https://build.nvidia.com/nvidia/nemotron-3.5-lightning-30b-a3b/modelcard"
+      },
+      {
+        "label": "Ollama: NVIDIA Nemotron 3.5 Lightning",
+        "url": "https://ollama.com/blog/nemotron-3-5-lightning"
+      },
+      {
+        "label": "Ollama: Nemotron 3.5 Lightning model tags and sizes",
+        "url": "https://ollama.com/library/nemotron-3.5-lightning/tags"
+      }
+    ],
+    "takeaway": "WATCH until a local model passes the real workload on the proposed machine. ACT on total memory, language, licence and recurring cost. PASS on choosing a host from the “3B active” headline alone.",
+    "title": "Budget a local AI model for the machine it needs."
+  },
+  "schemaVersion": 2
+}

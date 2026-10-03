@@ -1,0 +1,74 @@
+{
+  "approval": {
+    "approvedAt": "2026-10-02T22:24:50+00:00",
+    "approvedBy": "Valerii Karpov",
+    "contentSha256": "81373b4b60c023d9049f435d46099a83c5dede4bd836c906a1ca987c28be0a20"
+  },
+  "article": {
+    "art": "google-ai-search",
+    "author": "Valerii Karpov",
+    "canonicalUrl": "https://vkvstudio.pro/briefings/google-ai-search-controls-and-insights/",
+    "category": "Update · AI search",
+    "checkedAt": "2026-10-01",
+    "dek": "Google expanded Search Console insights and site-owner controls on August 31. Here is what the new view can answer—and what it cannot.",
+    "eventDate": "2026-08-31",
+    "eventLabel": "GLOBAL ROLLOUT",
+    "evidence": "Google’s June 3 announcement was updated on August 31 to say AI-feature controls and Search Console insights had rolled out to all websites worldwide. This is a source review, not a test in a client Search Console account.",
+    "evidenceStatus": "source",
+    "facts": "Google’s June 3 announcement was updated on August 31 to say AI-feature controls and Search Console insights had rolled out to all websites worldwide. This is a source review, not a test in a client Search Console account.",
+    "interpretation": "Consider a supplier whose guide appears for an informational question while its service page does not explain scope clearly. The impression is a reason to inspect those pages, not proof of buyer intent or return on advertising spend. The example is an editorial hypothesis, not a measured client case.\n\nKeep Google’s reporting separate from observations in other assistants and from enquiries. Google describes the AI-use control as affecting the corresponding traffic and impressions, rather than an ordinary ranking lever outside those features. Choose a control for a documented business reason.",
+    "language": "en",
+    "limits": "The announcement does not establish that a given page will appear, receive clicks or produce customers. We have not measured a change in VKV Studio or client traffic from this rollout.",
+    "mediaRights": "The 48 section scenes and paired Studio workbench are documented staged generated illustrations, not factual photographs or test screenshots. Provenance/rights evidence for the original article covers, OG derivatives, logo and remaining shipped artwork is incomplete. This content-only export records that unresolved state; it is not a media-rights certification or public release approval.",
+    "minutes": 3,
+    "practicalDecision": "ACT: compare a small set of service pages with the announced Google AI-feature insights. WATCH the resulting baseline; an impression is not a citation, qualified enquiry or sale.",
+    "previewImage": "/images/google-ai-search-day.webp",
+    "publishedAt": "2026-10-02",
+    "sections": [
+      {
+        "heading": "The August update made the question more concrete",
+        "paragraphs": [
+          "Google’s June announcement was updated on August 31 to describe worldwide rollout of AI-feature insights and site-owner controls. The announced view covers impressions, pages and countries; the control concerns whether a site may appear or ground the affected AI features.",
+          "That update date is not the original announcement date. This is a source analysis, not a test in a customer’s Search Console account. Availability described by Google does not establish that a particular service page appears."
+        ]
+      },
+      {
+        "heading": "An appearance is not a customer",
+        "paragraphs": [
+          "Consider a supplier whose guide appears for an informational question while its service page does not explain scope clearly. The impression is a reason to inspect those pages, not proof of buyer intent or return on advertising spend. The example is an editorial hypothesis, not a measured client case.",
+          "Keep Google’s reporting separate from observations in other assistants and from enquiries. Google describes the AI-use control as affecting the corresponding traffic and impressions, rather than an ordinary ranking lever outside those features. Choose a control for a documented business reason."
+        ]
+      },
+      {
+        "heading": "A useful thirty-minute review",
+        "paragraphs": [
+          "ACT by listing your important service pages, selecting a country and date range, and saving the initial report. Compare what each visible page explains with the questions your buyers ask. Record missing data instead of filling it with an estimated benefit.",
+          "For France, Sweden, Finland, the UK, the US or Slovenia, use the actual market and query language rather than assuming English covers every buyer. WATCH changes against the same baseline and qualified-enquiry definition. PASS on treating worldwide feature rollout as worldwide demand for your service."
+        ]
+      }
+    ],
+    "service": {
+      "label": "See the AI visibility audit",
+      "reason": "The GEO audit uses public sources to define a query, page and market baseline. Reviewing your own Search Console report is an optional separate step; account access or private report analysis is not included in that public-only package. No assistant placement or sales lift is promised.",
+      "url": "https://vkvstudio.com/en/services/geo-audit/"
+    },
+    "slug": "google-ai-search-controls-and-insights",
+    "sources": [
+      {
+        "label": "Google: New opportunities, control and insights for website owners (updated August 31, 2026)",
+        "url": "https://blog.google/products-and-platforms/products/search/new-controls-website-owners/"
+      },
+      {
+        "label": "Google Search Central: generative AI performance reports in Search Console",
+        "url": "https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports"
+      },
+      {
+        "label": "Google Search Central: AI features and your website",
+        "url": "https://developers.google.com/search/docs/appearance/ai-features"
+      }
+    ],
+    "takeaway": "ACT: compare a small set of service pages with the announced Google AI-feature insights. WATCH the resulting baseline; an impression is not a citation, qualified enquiry or sale.",
+    "title": "AI Search now has a clearer baseline. It still needs a business question."
+  },
+  "schemaVersion": 2
+}

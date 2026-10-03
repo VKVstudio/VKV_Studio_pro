@@ -43,7 +43,6 @@ export default defineNuxtConfig({
         { name: 'color-scheme', content: 'dark light' },
         { name: 'theme-color', content: '#0d1011', tagPriority: 45 },
       ],
-      script: [{ src: '/theme-init.js' }],
       link: [
         { rel: 'icon', type: 'image/webp', href: '/vkv-logo-compact.webp' },
         { rel: 'preload', as: 'font', type: 'font/woff2', href: '/fonts/jetbrains-mono-latin.woff2', crossorigin: 'anonymous', tagPriority: 40 },

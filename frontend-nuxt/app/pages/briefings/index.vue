@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import ArticleTeaser from '~/components/ArticleTeaser.vue';
 import { computed, nextTick, onMounted, ref, watch } from 'vue';
 import { articles, canonicalUrl } from '~/data/articles';
 import type { Article } from '~/data/articles';

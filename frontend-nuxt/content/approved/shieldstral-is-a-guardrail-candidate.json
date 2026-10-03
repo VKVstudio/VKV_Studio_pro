@@ -1,0 +1,69 @@
+{
+  "approval": {
+    "approvedAt": "2026-10-02T22:24:52+00:00",
+    "approvedBy": "Valerii Karpov",
+    "contentSha256": "5190781c05a8a20a1c96766652a04d2182f08ea46b6cdeaf190a865f226300db"
+  },
+  "article": {
+    "art": "shieldstral",
+    "author": "Valerii Karpov",
+    "canonicalUrl": "https://vkvstudio.pro/briefings/shieldstral-is-a-guardrail-candidate/",
+    "category": "Update · local AI",
+    "checkedAt": "2026-10-01",
+    "dek": "Mistral’s Shieldstral checks content against a supplied policy. For a private assistant, the buying decision depends on the policy, missed problems, false alarms and operating cost.",
+    "eventDate": "2026-08-04",
+    "evidence": "Mistral’s August 4 release describes an open-weights text-and-image safety model with policy input and Apache 2.0 licensing. The vendor states a single-16GB-GPU deployment profile. No VKV benchmark or integration is claimed.",
+    "evidenceStatus": "source",
+    "facts": "Mistral’s August 4 release describes an open-weights text-and-image safety model with policy input and Apache 2.0 licensing. The vendor states a single-16GB-GPU deployment profile. No VKV benchmark or integration is claimed.",
+    "interpretation": "The release gives a 16GB GPU deployment profile. Ask an engineer to check the actual hardware, workload, additional response delay and running cost. Other hardware or smaller model formats require their own evaluation; “local” does not mean cost-free.\n\nChoose the fallback before a trial. If the safety check is missing or uncertain, a required check must not be silently skipped. Depending on the task, the fallback may block the answer or send it to a person rather than continue automatically.",
+    "language": "en",
+    "limits": "That vendor hardware profile is not a measured minimum for every setup. We have not measured response time, missed problems or legitimate questions rejected on a client’s hardware or languages.",
+    "mediaRights": "The 48 section scenes and paired Studio workbench are documented staged generated illustrations, not factual photographs or test screenshots. Provenance/rights evidence for the original article covers, OG derivatives, logo and remaining shipped artwork is incomplete. This content-only export records that unresolved state; it is not a media-rights certification or public release approval.",
+    "minutes": 3,
+    "practicalDecision": "WATCH until a safety model is tested on your policy and target languages. ACT first on permissions and a clear failure path. PASS on treating a model’s safety score as authority to read data or take an action.",
+    "previewImage": "/images/shieldstral-day.webp",
+    "publishedAt": "2026-10-02",
+    "sections": [
+      {
+        "heading": "A policy can travel with the request",
+        "paragraphs": [
+          "Shieldstral is intended to assess text and images against a supplied policy. A private assistant could use that check before answering a request and before returning a response. This is a proposed use, not an integration result.",
+          "The policy has to describe the business boundary: which documents a person may access, which requests must stop, and when a reviewer is needed. A published vendor benchmark does not establish whether your legitimate customer questions will be accepted."
+        ]
+      },
+      {
+        "heading": "Local does not mean free of constraints",
+        "paragraphs": [
+          "The release gives a 16GB GPU deployment profile. Ask an engineer to check the actual hardware, workload, additional response delay and running cost. Other hardware or smaller model formats require their own evaluation; “local” does not mean cost-free.",
+          "Choose the fallback before a trial. If the safety check is missing or uncertain, a required check must not be silently skipped. Depending on the task, the fallback may block the answer or send it to a person rather than continue automatically."
+        ]
+      },
+      {
+        "heading": "Where it fits in a business decision",
+        "paragraphs": [
+          "ACT by writing allowed, disallowed and ambiguous examples from the real task. Include the languages your buyers use, long requests and attempts to disguise restricted content. Record both missed problems and legitimate questions wrongly blocked, along with operating cost.",
+          "WATCH until those results justify another model. Keep document permissions and action controls in the server even after a successful trial. The classifier may inform a decision; it cannot give a user new access rights."
+        ]
+      }
+    ],
+    "service": {
+      "label": "Explore on-prem AI",
+      "reason": "If your assistant must operate with a private data boundary, review the on-prem AI scope and discuss the target workload, permitted users, hardware and fallback. A safety classifier is one candidate component, not the complete service.",
+      "url": "https://vkvstudio.com/en/services/on-prem-ai/"
+    },
+    "slug": "shieldstral-is-a-guardrail-candidate",
+    "sources": [
+      {
+        "label": "Mistral: Introducing Shieldstral, August 4, 2026",
+        "url": "https://mistral.ai/news/shieldstral/"
+      },
+      {
+        "label": "Mistral: Shieldstral model documentation",
+        "url": "https://docs.mistral.ai/models/shieldstral-1-0"
+      }
+    ],
+    "takeaway": "WATCH until a safety model is tested on your policy and target languages. ACT first on permissions and a clear failure path. PASS on treating a model’s safety score as authority to read data or take an action.",
+    "title": "Before adding a safety model, decide what failure must block."
+  },
+  "schemaVersion": 2
+}

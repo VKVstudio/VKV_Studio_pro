@@ -15,7 +15,8 @@ try {
     const approval = JSON.parse(await readFile(new URL('../publication-approval.json', import.meta.url), 'utf8'));
     await verifyPublicRelease(fileURLToPath(new URL('../', import.meta.url)), articles, approval);
     await writeFile(generated, `${JSON.stringify(articles, null, 2)}\n`, 'utf8');
-    console.log(`Content gate passed: ${articles.length} backend-approved articles with exact owner release approval.`);
+    const signer = approval.payload.schemaVersion === 2 ? 'delegated operator' : 'owner';
+    console.log(`Content gate passed: ${articles.length} approved articles; exact release snapshot verified (${signer} signature).`);
   } else {
     const slugs = new Set();
     for (const article of previewArticles) {

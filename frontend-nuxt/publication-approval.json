@@ -1,0 +1,12 @@
+{
+  "payload": {
+    "schemaVersion": 2,
+    "approvedBy": "Valerii Karpov",
+    "signedBy": "Codex release operator",
+    "keyId": "codex-pro-initial-eight-2026-10-03",
+    "revision": "pro-initial-eight-2026-10-03",
+    "approvedAt": "2026-10-02T22:52:40Z",
+    "manifestSha256": "cffa74d3173bd1e0635bff245632e2443a8ad91e573b642030115fa03472a4ff"
+  },
+  "signature": "6z+OB8uSlD9e3CQbgMLH+p9MeuO6b6Heom2gNycdnno3aXeijsC2vLK182mHquhQN1dVPLUVVnfO6hr9eNluCA=="
+}

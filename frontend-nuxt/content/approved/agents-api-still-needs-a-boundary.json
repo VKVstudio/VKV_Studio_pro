@@ -1,0 +1,69 @@
+{
+  "approval": {
+    "approvedAt": "2026-10-02T22:24:50+00:00",
+    "approvedBy": "Valerii Karpov",
+    "contentSha256": "fde8b4368a69ec7a4326ddbe2aa0d93651d73d32262d7f8ea4898ff71623ec31"
+  },
+  "article": {
+    "art": "agents-api",
+    "author": "Valerii Karpov",
+    "canonicalUrl": "https://vkvstudio.pro/briefings/agents-api-still-needs-a-boundary/",
+    "category": "Update · AI agents",
+    "checkedAt": "2026-10-01",
+    "dek": "OpenAI’s September 10 public beta manages parts of an agent workflow. A buyer still needs to define the task, permitted actions, data boundary and acceptance test.",
+    "eventDate": "2026-09-10",
+    "evidence": "OpenAI announced the Agents API in public beta on September 10 and documented hosted, self-managed and partner sandbox choices. This article analyses the release; it does not report a production trial.",
+    "evidenceStatus": "source",
+    "facts": "OpenAI announced the Agents API in public beta on September 10 and documented hosted, self-managed and partner sandbox choices. This article analyses the release; it does not report a production trial.",
+    "interpretation": "A useful example is a support assistant drafting an answer from one approved manual set, with source passages and an explicit “not found” when evidence is missing. A person accepts the answer. This is a proposed pilot, not an observed time saving.\n\nAgree test questions, incorrect-document cases, permitted users and the cost ceiling before the trial. A documentation RAG pilot tests this retrieval task; it does not include autonomous purchasing, CRM changes or message sending. Those actions need a separate scope and permission design.",
+    "language": "en",
+    "limits": "No claim here about cost savings, reliability or completion rates in a client workflow. Those depend on the task, tools, data and acceptance test, and need to be measured in a pilot.",
+    "mediaRights": "The 48 section scenes and paired Studio workbench are documented staged generated illustrations, not factual photographs or test screenshots. Provenance/rights evidence for the original article covers, OG derivatives, logo and remaining shipped artwork is incomplete. This content-only export records that unresolved state; it is not a media-rights certification or public release approval.",
+    "minutes": 3,
+    "practicalDecision": "ACT on one documented task; WATCH the API until it passes your acceptance cases. If the need is answering from manuals, start with document retrieval. If the steps are fixed, simple automation may be enough.",
+    "previewImage": "/images/agents-api-day.webp",
+    "publishedAt": "2026-10-02",
+    "sections": [
+      {
+        "heading": "What the release actually provides",
+        "paragraphs": [
+          "OpenAI announced the Agents API in public beta on September 10. It offers managed coordination for longer tasks and a choice of hosted, self-managed or partner execution environments. This is a vendor release analysis; no VKV client deployment with this API is claimed.",
+          "The service does not define your company’s permissions or decide which records an assistant may change. The buyer must name the operator, allowed data, maximum spend and the response to an incorrect or unfinished result."
+        ]
+      },
+      {
+        "heading": "A pilot should be narrower than the demo",
+        "paragraphs": [
+          "A useful example is a support assistant drafting an answer from one approved manual set, with source passages and an explicit “not found” when evidence is missing. A person accepts the answer. This is a proposed pilot, not an observed time saving.",
+          "Agree test questions, incorrect-document cases, permitted users and the cost ceiling before the trial. A documentation RAG pilot tests this retrieval task; it does not include autonomous purchasing, CRM changes or message sending. Those actions need a separate scope and permission design."
+        ]
+      },
+      {
+        "heading": "Choose the hosting boundary before the model",
+        "paragraphs": [
+          "ACT by choosing the simplest process that meets the need. Fixed rules may call for ordinary automation. Questions over documents may call for retrieval. An agent is relevant when the next permitted step depends on the result of earlier work.",
+          "WATCH until evidence shows that the extra coordination is useful for your workload. Check data location, hosting operations and recovery as well as the model. PASS on broad autonomy without a named owner, reversible actions and a demonstrated failure path."
+        ]
+      }
+    ],
+    "service": {
+      "label": "Explore the documentation RAG pilot",
+      "reason": "For questions over manuals or internal documents, review the documentation RAG pilot: one document set, agreed questions, cited answers and unresolved cases. Autonomous actions, CRM changes and sending messages require a separate scope.",
+      "url": "https://vkvstudio.com/en/services/rag-pilot/"
+    },
+    "slug": "agents-api-still-needs-a-boundary",
+    "sources": [
+      {
+        "label": "OpenAI: Introducing the Agents API, September 10, 2026",
+        "url": "https://openai.com/index/introducing-the-agents-api/"
+      },
+      {
+        "label": "OpenAI Developers: Agents API overview",
+        "url": "https://developers.openai.com/api/docs/guides/agents-api/overview"
+      }
+    ],
+    "takeaway": "ACT on one documented task; WATCH the API until it passes your acceptance cases. If the need is answering from manuals, start with document retrieval. If the steps are fixed, simple automation may be enough.",
+    "title": "Agent infrastructure got easier. Delegation still needs a boundary."
+  },
+  "schemaVersion": 2
+}

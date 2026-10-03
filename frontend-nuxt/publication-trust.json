@@ -1,0 +1,13 @@
+{
+  "keys": [
+    {
+      "id": "codex-pro-initial-eight-2026-10-03",
+      "subject": "Codex release operator",
+      "delegatedBy": "Valerii Karpov",
+      "revision": "pro-initial-eight-2026-10-03",
+      "manifestSha256": "cffa74d3173bd1e0635bff245632e2443a8ad91e573b642030115fa03472a4ff",
+      "canApproveRelease": true,
+      "publicKey": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEA9nkl5LtVOyzO0o4WNItlwOB8j2pu1UdKn3L0BXGazGU=\n-----END PUBLIC KEY-----\n"
+    }
+  ]
+}

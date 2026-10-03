@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { studioLink } from '~/utils/studio-links';
+import ArticleTeaser from '~/components/ArticleTeaser.vue';
 import { articles, articlePath, canonicalUrl } from '~/data/articles';
 const studioOrigin = useAppConfig().studioPreviewOrigin;
 const recentUpdates = articles.filter((article) => article.eventDate).sort((a, b) => b.eventDate!.localeCompare(a.eventDate!)).slice(0, 3);

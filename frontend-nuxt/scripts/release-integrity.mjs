@@ -45,14 +45,25 @@ export async function releaseManifest(frontendRoot, articles) {
 export function verifyReleaseSignature(approval, manifest, trust) {
   const payload = approval?.payload;
   const exact = (value, keys) => value && !Array.isArray(value) && typeof value === 'object' && Object.keys(value).sort().join(',') === [...keys].sort().join(',');
-  if (!exact(approval, ['payload', 'signature']) || !exact(payload, ['schemaVersion', 'approvedBy', 'keyId', 'revision', 'approvedAt', 'manifestSha256'])
-    || payload.schemaVersion !== 1 || payload.approvedBy !== OWNER
+  const common = ['schemaVersion', 'approvedBy', 'keyId', 'revision', 'approvedAt', 'manifestSha256'];
+  const ownerSigned = payload?.schemaVersion === 1 && exact(payload, common);
+  const operatorSigned = payload?.schemaVersion === 2 && exact(payload, [...common, 'signedBy'])
+    && payload.signedBy === 'Codex release operator';
+  if (!exact(approval, ['payload', 'signature']) || (!ownerSigned && !operatorSigned)
+    || payload.approvedBy !== OWNER
     || !/^[a-z0-9][a-z0-9-]{0,63}$/.test(payload.keyId ?? '')
     || !/^[a-z0-9][a-z0-9-]{0,63}$/.test(payload.revision ?? '')
     || !/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$/.test(payload.approvedAt ?? '')
     || !Number.isFinite(Date.parse(payload.approvedAt)) || payload.manifestSha256 !== digest(manifest)
     || typeof approval.signature !== 'string' || !/^[A-Za-z0-9+/]{86}==$/.test(approval.signature)) throw new Error('Invalid signed release approval');
-  const trusted = trust?.keys?.find((key) => key.id === payload.keyId && key.subject === OWNER && key.canApproveRelease === true && key.revoked !== true);
+  // V1 remains owner-only. V2 delegates only this exact approved snapshot to
+  // a separately identified operator; it never grants backend identity/roles.
+  const trusted = trust?.keys?.find((key) => key.id === payload.keyId
+    && key.canApproveRelease === true && key.revoked !== true
+    && (ownerSigned
+      ? key.subject === OWNER
+      : key.subject === payload.signedBy && key.delegatedBy === OWNER
+        && key.revision === payload.revision && key.manifestSha256 === payload.manifestSha256));
   if (!trusted) throw new Error('Release approver is not trusted');
   const key = createPublicKey(trusted.publicKey);
   if (key.asymmetricKeyType !== 'ed25519' || !verify(null, Buffer.from(canonical(payload)), key, Buffer.from(approval.signature, 'base64'))) throw new Error('Release signature verification failed');

@@ -38,7 +38,7 @@ Offline regression suite (existing Python/Node, no install/listener/network):
 & $py -B -m unittest discover -s backend -p "test_*.py" -v
 ```
 
-The private identity service and its deployment are pending owner acceptance. `identity.PinnedJWTVerifier` now verifies bounded RS256 JWTs against explicitly supplied fresh trusted public keys, issuer/audience/time/subject pins and revoked subjects. Roles come from server configuration, never token role/email/actor fields. It does not fetch JWKS or discover credentials; stale/unknown keys deny access. No real keys, subjects or tokens were provisioned. Cloudflare Access requires a separately reviewed gateway/browser integration and key refresh: this bearer-only API rejects cookies and does not trust a forwarded header. The default configuration still uses DenyAll. No remote setup is authorized.
+The owner has authorized the isolated backend/n8n deployment. The private identity integration remains pending: `identity.PinnedJWTVerifier` verifies bounded RS256 JWTs against explicitly supplied fresh trusted public keys, issuer/audience/time/subject pins and revoked subjects. Roles come from server configuration, never token role/email/actor fields. It does not fetch JWKS or discover credentials; stale/unknown keys deny access. No real keys, subjects or tokens were provisioned. Cloudflare Access requires a separately reviewed gateway/browser integration and key refresh: this bearer-only API rejects cookies and does not trust a forwarded header. The default configuration still uses DenyAll. Deployment authorization does not turn an unconfigured private API into an authenticated live service.
 
 ## Pilot now; bounded automatic news later
 

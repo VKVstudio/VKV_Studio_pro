@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { generateKeyPairSync, sign } from 'node:crypto';
-import { mkdtemp, mkdir, writeFile, rm } from 'node:fs/promises';
+import { mkdtemp, mkdir, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { canonical, digest, OWNER } from '../../contracts/article-export.mjs';
@@ -36,5 +36,29 @@ test('release binds rendered media bytes and requires per-slug OG', async () => 
     const after = await releaseManifest(root, articles);
     assert.throws(() => verifyReleaseSignature(signed, after, trust));
     await assert.rejects(releaseManifest(root, [{ slug: 'missing-og', previewImage: '/images/story.webp' }]));
-  } finally { await rm(root, { recursive: true, force: true }); }
+  } finally { /* Retain individual synthetic artifacts under the owner's no-delete rule. */ }
+});
+
+test('delegated operator signature is confined to the exact owner-authorized release', () => {
+  const manifest = { schemaVersion: 1, contentSha256: 'operator-test', media: [] };
+  const payload = { schemaVersion: 2, approvedBy: OWNER, signedBy: 'Codex release operator', keyId: 'test-operator', revision: 'test-release', approvedAt: '2026-10-03T00:00:00Z', manifestSha256: digest(manifest) };
+  const grant = { id: payload.keyId, subject: payload.signedBy, delegatedBy: OWNER, revision: payload.revision, manifestSha256: payload.manifestSha256, canApproveRelease: true, publicKey: keys.publicKey.export({ type: 'spki', format: 'pem' }) };
+  const signature = (value) => ({ payload: value, signature: sign(null, Buffer.from(canonical(value)), keys.privateKey).toString('base64') });
+  assert.equal(verifyReleaseSignature(signature(payload), manifest, { keys: [grant] }), manifest);
+  for (const changed of [
+    { ...grant, revision: 'another-release' },
+    { ...grant, manifestSha256: '0'.repeat(64) },
+    { ...grant, delegatedBy: 'Another person' },
+    { ...grant, subject: OWNER },
+    { ...grant, revoked: true },
+    { ...grant, canApproveRelease: false },
+  ]) assert.throws(() => verifyReleaseSignature(signature(payload), manifest, { keys: [changed] }));
+  for (const changed of [
+    { ...payload, signedBy: OWNER },
+    { ...payload, schemaVersion: 1 },
+    { ...payload, approvedBy: 'Another person' },
+    { ...payload, unexpected: true },
+  ]) assert.throws(() => verifyReleaseSignature(signature(changed), manifest, { keys: [grant] }));
+  assert.throws(() => verifyReleaseSignature(signature(payload), { ...manifest, contentSha256: 'altered' }, { keys: [grant] }));
+  assert.throws(() => verifyReleaseSignature(signature(payload), manifest, { keys: [] }));
 });

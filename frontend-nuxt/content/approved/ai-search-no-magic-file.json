@@ -1,0 +1,69 @@
+{
+  "approval": {
+    "approvedAt": "2026-10-02T22:24:49+00:00",
+    "approvedBy": "Valerii Karpov",
+    "contentSha256": "d4d360f79f68bbc7ebc4f327e0ebf0abfff3dc448f6dc190f7e47f5813fb552f"
+  },
+  "article": {
+    "art": "ai-search-fundamentals",
+    "author": "Valerii Karpov",
+    "canonicalUrl": "https://vkvstudio.pro/briefings/ai-search-no-magic-file/",
+    "category": "Source note · AI search",
+    "checkedAt": "2026-10-01",
+    "dek": "An evergreen purchasing checklist: establish crawlable pages, supported claims and an honest measurement plan before paying for Google AI-search visibility.",
+    "eventDate": null,
+    "evidence": "Google Search Central says ordinary SEO fundamentals apply to AI Overviews and AI Mode, with no special AI file or schema required. Eligibility does not guarantee inclusion. No client experiment is reported here.",
+    "evidenceStatus": "source",
+    "facts": "Google Search Central says ordinary SEO fundamentals apply to AI Overviews and AI Mode, with no special AI file or schema required. Eligibility does not guarantee inclusion. No client experiment is reported here.",
+    "interpretation": "Make a short list of the pages that explain what you sell. Check whether their important text can be crawled, whether the pages are indexed, and whether the visible scope matches the evidence. Ask what customer question each page answers.\n\nKeep three results separate: page eligibility, an observed citation for a dated question, and a qualified enquiry. Record the engine, query, country and language for citation observations. Google-specific checks do not prove visibility in other assistants.",
+    "language": "en",
+    "limits": "This Google guidance does not establish rules for every AI engine, supplier recommendation or sales outcome. We have not measured client rankings, answer citations or enquiries for this note.",
+    "mediaRights": "The 48 section scenes and paired Studio workbench are documented staged generated illustrations, not factual photographs or test screenshots. Provenance/rights evidence for the original article covers, OG derivatives, logo and remaining shipped artwork is incomplete. This content-only export records that unresolved state; it is not a media-rights certification or public release approval.",
+    "minutes": 2,
+    "practicalDecision": "ACT on missing search fundamentals. PASS on a promise that a special file or schema guarantees Google AI placement. This guide concerns eligibility; the separate rollout briefing concerns the new reporting controls.",
+    "previewImage": "/images/ai-search-fundamentals-day.webp",
+    "publishedAt": "2026-10-02",
+    "sections": [
+      {
+        "heading": "The source says less—and more—than a sales deck",
+        "paragraphs": [
+          "Google’s guidance describes eligibility through ordinary search requirements: the page must be indexed and eligible for a search snippet. It does not require an additional AI-specific file or special structured-data format. Eligible pages are still not guaranteed an appearance.",
+          "For a business owner, that distinction separates a technical prerequisite from a purchased outcome. A supplier can investigate pages and improve their explanations; an inclusion guarantee needs evidence that this guidance does not provide."
+        ]
+      },
+      {
+        "heading": "What to measure before changing the site",
+        "paragraphs": [
+          "Make a short list of the pages that explain what you sell. Check whether their important text can be crawled, whether the pages are indexed, and whether the visible scope matches the evidence. Ask what customer question each page answers.",
+          "Keep three results separate: page eligibility, an observed citation for a dated question, and a qualified enquiry. Record the engine, query, country and language for citation observations. Google-specific checks do not prove visibility in other assistants."
+        ]
+      },
+      {
+        "heading": "The business decision",
+        "paragraphs": [
+          "ACT if key pages are blocked, thin or unclear. Ask for a baseline and a list of changes you can inspect. WATCH if the basics are sound but no relevant query set has been measured; define that set before buying another package.",
+          "PASS if the offer is only a magic file or a guaranteed AI answer placement. This evergreen checklist is for choosing the work. The linked Google rollout briefing explains a separate question: what the announced reporting and controls can tell a site owner."
+        ]
+      }
+    ],
+    "service": {
+      "label": "See the AI visibility audit",
+      "reason": "If your decision is whether owned pages are eligible and useful for your buyers, request the AI visibility audit scope. It is an investigation, not guaranteed inclusion or ad placement.",
+      "url": "https://vkvstudio.com/en/services/geo-audit/"
+    },
+    "slug": "ai-search-no-magic-file",
+    "sources": [
+      {
+        "label": "Google Search Central: AI features and your website",
+        "url": "https://developers.google.com/search/docs/appearance/ai-features"
+      },
+      {
+        "label": "Google Search Central: Article structured data",
+        "url": "https://developers.google.com/search/docs/appearance/structured-data/article"
+      }
+    ],
+    "takeaway": "ACT on missing search fundamentals. PASS on a promise that a special file or schema guarantees Google AI placement. This guide concerns eligibility; the separate rollout briefing concerns the new reporting controls.",
+    "title": "Google’s AI search guidance starts with a website people can use."
+  },
+  "schemaVersion": 2
+}

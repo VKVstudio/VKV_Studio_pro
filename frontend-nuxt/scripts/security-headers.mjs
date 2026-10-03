@@ -1,8 +1,10 @@
+import { addSubresourceIntegrity } from './subresource-integrity.mjs';
 import { createHash } from 'node:crypto';
 import { readdir, readFile, writeFile } from 'node:fs/promises';
 import { join, relative, resolve } from 'node:path';
 
-const root = resolve('.output/public');
+// An explicit output keeps isolated audits from overwriting an earlier build.
+const root = resolve(process.argv[2] || '.output/public');
 async function htmlFiles(directory) {
   const entries = await readdir(directory, { withFileTypes: true });
   const children = await Promise.all(entries.map(async (entry) => entry.isDirectory() ? htmlFiles(join(directory, entry.name)) : entry.name.endsWith('.html') ? [join(directory, entry.name)] : []));
@@ -45,6 +47,7 @@ const headers = [
   '  X-Content-Type-Options: nosniff',
   '  Referrer-Policy: strict-origin-when-cross-origin',
   '  Cross-Origin-Resource-Policy: same-origin',
+  '  Cross-Origin-Embedder-Policy: require-corp',
   '  Cross-Origin-Opener-Policy: same-origin-allow-popups',
   '  Strict-Transport-Security: max-age=31536000',
   '  X-Frame-Options: DENY',
@@ -72,3 +75,6 @@ if (process.env.VKV_LOCAL_AUDIT_ORIGIN) {
   }
 }
 console.log(`Generated CSP for ${files.length} HTML files and ${hashes.size} unique inline scripts.`);
+
+const integrity = await addSubresourceIntegrity(root);
+console.log(`SRI: ${integrity.protectedReferences} local script/style references in ${integrity.htmlPages} pages.`);

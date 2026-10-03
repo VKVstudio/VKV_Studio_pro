@@ -1,4 +1,8 @@
 <script setup lang="ts">
+import { studioLink } from '~/utils/studio-links';
+import ReadingVisual from '~/components/ReadingVisual.vue';
+import SectionSceneImage from '~/components/SectionSceneImage.vue';
+import ShareLinks from '~/components/ShareLinks.vue';
 import { articles, articlePath, canonicalUrl } from '~/data/articles';
 import { sectionScenesBySlug } from '~/data/section-scenes';
 import { editorialArticleSchema, serializeEditorialSchema } from '~/utils/editorial-schema';

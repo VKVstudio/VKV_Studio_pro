@@ -1,0 +1,69 @@
+{
+  "approval": {
+    "approvedAt": "2026-10-02T22:24:51+00:00",
+    "approvedBy": "Valerii Karpov",
+    "contentSha256": "15402da5bbbc17e2b0ce3f99d30c05a496575937a2c85d8a1ffd8fb5a440273e"
+  },
+  "article": {
+    "art": "sponsored-agents",
+    "author": "Valerii Karpov",
+    "canonicalUrl": "https://vkvstudio.pro/briefings/sponsored-agents-are-still-ads/",
+    "category": "Update · AI commerce",
+    "checkedAt": "2026-10-01",
+    "dek": "OpenAI is testing Sponsored Agents with select US advertisers while expanding ChatGPT Ads internationally. Paid brand conversations and independent answers are different channels.",
+    "eventDate": "2026-09-16",
+    "evidence": "OpenAI’s September 16 announcement describes a test with select US advertisers in which a user may start a clearly labelled brand conversation after clicking a ChatGPT ad. We have not run a campaign or observed advertiser results.",
+    "evidenceStatus": "source",
+    "facts": "OpenAI’s September 16 announcement describes a test with select US advertisers in which a user may start a clearly labelled brand conversation after clicking a ChatGPT ad. We have not run a campaign or observed advertiser results.",
+    "interpretation": "A paid brand conversation and a source cited in an independent answer have different origins. Keep their budgets, disclosure and measurements separate. Combining them into one “AI visibility” number can hide what the business actually bought.\n\nFor a future paid test, define a qualified enquiry, the handoff to a person and a spending limit. For organic visibility, record owned pages, dated questions, markets and observed citations. Neither an impression nor an opened conversation is a sale.",
+    "language": "en",
+    "limits": "The September 23 expansion of ChatGPT Ads does not establish that Sponsored Agents are available outside the initial US test, or that a campaign would perform well. Paid placement does not influence ChatGPT’s independent answers.",
+    "mediaRights": "The 48 section scenes and paired Studio workbench are documented staged generated illustrations, not factual photographs or test screenshots. Provenance/rights evidence for the original article covers, OG derivatives, logo and remaining shipped artwork is incomplete. This content-only export records that unresolved state; it is not a media-rights certification or public release approval.",
+    "minutes": 3,
+    "practicalDecision": "WATCH Sponsored Agents unless your business is eligible for the announced select-US test. PASS on “organic ChatGPT placement” promises based on an ad pilot. Paid and independent-answer visibility need separate measures.",
+    "previewImage": "/images/sponsored-agents-day.webp",
+    "publishedAt": "2026-10-02",
+    "sections": [
+      {
+        "heading": "What OpenAI announced",
+        "paragraphs": [
+          "OpenAI’s September 16 announcement describes Sponsored Agents as a test with select US advertisers: a user clicks an ad and may enter a labelled brand conversation. The paid conversation is separate from ChatGPT’s independent answer. No VKV campaign or advertiser result is reported.",
+          "A September 23 announcement described broader international ChatGPT Ads availability. Access to that ad platform does not establish access to the Sponsored Agents format, nor a campaign outcome. Check eligibility for the exact format, not just the platform name."
+        ]
+      },
+      {
+        "heading": "Keep paid and organic claims apart",
+        "paragraphs": [
+          "A paid brand conversation and a source cited in an independent answer have different origins. Keep their budgets, disclosure and measurements separate. Combining them into one “AI visibility” number can hide what the business actually bought.",
+          "For a future paid test, define a qualified enquiry, the handoff to a person and a spending limit. For organic visibility, record owned pages, dated questions, markets and observed citations. Neither an impression nor an opened conversation is a sale."
+        ]
+      },
+      {
+        "heading": "What a business can do now",
+        "paragraphs": [
+          "WATCH in France, Sweden, Finland, the UK and Slovenia: the source cited here does not establish Sponsored Agents access in those markets. In the US, WATCH unless the exact advertiser eligibility is confirmed. This is a dated source description, not a live account-availability check.",
+          "ACT on clear product facts and a reachable human contact path. PASS on a supplier presenting this paid pilot as guaranteed independent-answer placement. If a paid trial becomes available, compare qualified enquiries against your own baseline rather than adopting someone else’s campaign results."
+        ]
+      }
+    ],
+    "service": {
+      "label": "See the AI visibility audit",
+      "reason": "The AI visibility audit concerns your owned pages and an agreed organic baseline. It is not a Sponsored Agents campaign or advertising-placement service.",
+      "url": "https://vkvstudio.com/en/services/geo-audit/"
+    },
+    "slug": "sponsored-agents-are-still-ads",
+    "sources": [
+      {
+        "label": "OpenAI: Reimagining advertising with AI, September 16, 2026",
+        "url": "https://openai.com/index/reimagining-advertising-with-ai/"
+      },
+      {
+        "label": "OpenAI: ChatGPT Ads expands to Southeast Asia and Taiwan, September 23, 2026",
+        "url": "https://openai.com/index/chatgpt-ads-expands-southeast-asia-taiwan/"
+      }
+    ],
+    "takeaway": "WATCH Sponsored Agents unless your business is eligible for the announced select-US test. PASS on “organic ChatGPT placement” promises based on an ad pilot. Paid and independent-answer visibility need separate measures.",
+    "title": "A conversation after an ad is still an ad."
+  },
+  "schemaVersion": 2
+}
