@@ -56,7 +56,10 @@ function validateHeaderRules(rules) {
   const scripts = directives.get('script-src') ?? [];
   if (directives.get('default-src')?.join(' ') !== "'none'"
     || !scripts.includes("'self'")
-    || !scripts.every((source) => source === "'self'" || /^'sha(?:256|384|512)-[A-Za-z0-9+/]+={0,2}'$/.test(source))
+    || !scripts.includes("'strict-dynamic'")
+    || !scripts.some((source) => /^'sha(?:256|384|512)-[A-Za-z0-9+/]+={0,2}'$/.test(source))
+    || !scripts.every((source) => source === "'self'" || source === "'strict-dynamic'" || /^'sha(?:256|384|512)-[A-Za-z0-9+/]+={0,2}'$/.test(source))
+    || directives.get('base-uri')?.join(' ') !== "'none'"
     || directives.get('require-trusted-types-for')?.join(' ') !== "'script'") {
     throw new Error('Preview security policy is missing or invalid.');
   }

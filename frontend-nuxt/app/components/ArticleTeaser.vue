@@ -42,9 +42,9 @@ onBeforeUnmount(() => {
       <p>{{ article.dek }}</p>
       <div v-if="featured" class="feature-card__footer">
         <span>By Valerii Karpov</span>
-        <NuxtLink :to="articlePath(article.slug)">Read the briefing <span aria-hidden="true">↗</span></NuxtLink>
+        <NuxtLink :to="articlePath(article.slug)" :aria-label="`Read the briefing: ${article.title}`">Read the briefing <span aria-hidden="true">↗</span></NuxtLink>
       </div>
-      <NuxtLink v-else class="upcoming-card__foot" :to="articlePath(article.slug)">Read briefing ↗</NuxtLink>
+      <NuxtLink v-else class="upcoming-card__foot" :to="articlePath(article.slug)" :aria-label="`Read briefing: ${article.title}`">Read briefing <span aria-hidden="true">↗</span></NuxtLink>
     </div>
   </article>
 </template>

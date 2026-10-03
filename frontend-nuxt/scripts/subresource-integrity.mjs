@@ -23,6 +23,7 @@ export async function addSubresourceIntegrity(directory) {
   }
   await visit(root);
   const hashes = new Map();
+  const scriptHashes = new Set();
   const changes = [];
   let protectedReferences = 0;
   let externalReferences = 0;
@@ -56,6 +57,7 @@ export async function addSubresourceIntegrity(directory) {
       }
       if (!hashes.has(asset)) hashes.set(asset, digest(await readFile(asset)));
       const integrity = hashes.get(asset);
+      if (script) scriptHashes.add(integrity);
       if (attrs.has('integrity') && attrs.get('integrity') !== integrity) throw new Error('Stale asset integrity');
       if (attrs.has('crossorigin') && !['', 'anonymous'].includes(attrs.get('crossorigin'))) throw new Error('Credentialed static asset');
       const extra = (attrs.has('integrity') ? '' : ` integrity="${integrity}"`)
@@ -72,7 +74,7 @@ export async function addSubresourceIntegrity(directory) {
     if (await readFile(page, 'utf8') !== before) throw new Error('Generated HTML changed during integrity pass');
     if (after !== before) await writeFile(page, after);
   }
-  return { htmlPages: pages.length, protectedReferences, uniqueAssets: hashes.size, externalReferences };
+  return { htmlPages: pages.length, protectedReferences, uniqueAssets: hashes.size, externalReferences, scriptHashes: [...scriptHashes].sort() };
 }
 
 export default function subresourceIntegrity() {
