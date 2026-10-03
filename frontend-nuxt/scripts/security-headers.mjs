@@ -5,6 +5,25 @@ import { join, relative, resolve } from 'node:path';
 
 // An explicit output keeps isolated audits from overwriting an earlier build.
 const root = resolve(process.argv[2] || '.output/public');
+// Nuxt's client-only fallback HTML omits server plugins. Use the same fixed
+// parser-time program before CSS, before computing integrity/CSP authorization.
+const fallbackBootstrap = await readFile(new URL('../public/theme-init.js', import.meta.url), 'utf8');
+if (/<\/script/i.test(fallbackBootstrap)) throw new Error('Unsafe theme bootstrap serialization');
+for (const name of ['200.html', '404.html']) {
+  const file = join(root, name);
+  let html;
+  try { html = await readFile(file, 'utf8'); }
+  catch (error) { if (error.code === 'ENOENT') continue; throw error; }
+  const endOfHead = html.indexOf('</head>');
+  const head = html.slice(0, endOfHead);
+  if (head.includes('data-hid="vkv-pro-theme-init"')) continue;
+  const firstCss = head.search(/<link\b[^>]*\brel=["']stylesheet["']/i);
+  const themeColor = head.search(/<meta\b[^>]*\bname=["']theme-color["']/i);
+  if (endOfHead < 0 || firstCss < 0 || themeColor < 0 || themeColor >= firstCss)
+    throw new Error('Fallback theme metadata/CSS ordering requires review: ' + name);
+  const script = `<script data-hid="vkv-pro-theme-init">${fallbackBootstrap}</script>`;
+  await writeFile(file, html.slice(0, firstCss) + script + html.slice(firstCss));
+}
 async function htmlFiles(directory) {
   const entries = await readdir(directory, { withFileTypes: true });
   const children = await Promise.all(entries.map(async (entry) => entry.isDirectory() ? htmlFiles(join(directory, entry.name)) : entry.name.endsWith('.html') ? [join(directory, entry.name)] : []));

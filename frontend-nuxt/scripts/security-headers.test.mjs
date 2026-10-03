@@ -7,6 +7,7 @@ import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { spawnSync } from 'node:child_process';
 import { addSubresourceIntegrity } from './subresource-integrity.mjs';
+import { themeBootstrap } from '../app/utils/theme-bootstrap.ts';
 
 const generator = fileURLToPath(new URL('./security-headers.mjs', import.meta.url));
 const inline = 'document.documentElement.dataset.fixture = "ready";';
@@ -28,6 +29,37 @@ function generate(root) {
     encoding: 'utf8', windowsHide: true,
   });
 }
+
+test('parser-time theme bootstrap is authorized by exact bytes under strict CSP', async () => {
+  const root = await fixture(`<script>${themeBootstrap}</script><script type="module" src="/entry.js"></script>`);
+  const result = generate(root);
+  assert.equal(result.status, 0, result.stderr);
+  const headers = await readFile(join(root, '_headers'), 'utf8');
+  assert.ok(headers.includes(`'${digest(themeBootstrap, 'sha256')}'`));
+  assert.ok(headers.includes("'strict-dynamic'"));
+  assert.ok(headers.includes("require-trusted-types-for 'script'"));
+  assert.ok(headers.includes("base-uri 'none'"));
+  assert.doesNotMatch(headers, /'unsafe-inline'|'unsafe-eval'/);
+});
+
+test('Nuxt fallback pages receive one before-CSS bootstrap and retain exact authorization on rerun', async () => {
+  const root = await fixture();
+  const fallback = '<html><head><meta name="theme-color" content="#0d1011"><link rel="stylesheet" href="/entry.css"><script type="module" src="/entry.js"></script></head><body>Fallback</body></html>';
+  for (const name of ['200.html', '404.html']) await writeFile(join(root, name), fallback);
+  for (let attempt = 0; attempt < 2; attempt++) {
+    const result = generate(root);
+    assert.equal(result.status, 0, result.stderr);
+    const headers = await readFile(join(root, '_headers'), 'utf8');
+    assert.ok(headers.includes(`'${digest(themeBootstrap, 'sha256')}'`));
+    for (const name of ['200.html', '404.html']) {
+      const page = await readFile(join(root, name), 'utf8');
+      assert.equal([...page.matchAll(/data-hid="vkv-pro-theme-init"/g)].length, 1);
+      assert.ok(page.includes(`<script data-hid="vkv-pro-theme-init">${themeBootstrap}</script>`));
+      assert.ok(page.indexOf('name="theme-color"') < page.indexOf('data-hid="vkv-pro-theme-init"'));
+      assert.ok(page.indexOf('data-hid="vkv-pro-theme-init"') < page.indexOf('rel="stylesheet"'));
+    }
+  }
+});
 
 test('strict CSP authorizes every entry with matching SRI, without trusting stylesheet hashes', async () => {
   const root = await fixture();

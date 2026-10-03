@@ -25,6 +25,12 @@ export default defineNuxtConfig({
   } },
   devtools: { enabled: false },
   features: { inlineStyles: false },
+  experimental: {
+    defaults: {
+      // Prepare navigation on pointer/focus intent, without competing with first paint.
+      nuxtLink: { prefetchOn: { visibility: false, interaction: true } },
+    },
+  },
   appConfig: { publicRelease, indexable, studioPreviewOrigin },
   css: ['~/assets/styles/global.css', '~/assets/styles/site.css'],
   nitro: {
