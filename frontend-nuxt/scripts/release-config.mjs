@@ -1,6 +1,7 @@
 import { spawnSync } from 'node:child_process';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
+import { validateWebMcpTrial } from './webmcp-release-check.mjs';
 
 // A flag requests the release path; the editorial gate remains the authority.
 export const publicRelease = process.env.PUBLICATION_MODE === 'public' && process.env.VKV_PUBLIC_RELEASE_BUILD === '1';
@@ -21,6 +22,10 @@ export const indexable = publicRelease || localAudit;
 export const webmcpTrial = process.env.PUBLIC_WEBMCP_ORIGIN_TRIAL?.trim() ?? '';
 if (webmcpTrial && (webmcpTrial.length > 4096 || !/^[A-Za-z0-9+/]+={0,2}$/.test(webmcpTrial)))
   throw new Error('PUBLIC_WEBMCP_ORIGIN_TRIAL must be a single base64-encoded public token.');
+if (process.env.VKV_REQUIRE_WEBMCP_TRIAL === '1') {
+  if (!publicRelease) throw new Error('Required WebMCP metadata is a public-release check.');
+  validateWebMcpTrial(webmcpTrial, 'https://vkvstudio.pro', { required: true });
+}
 if (publicRelease) {
   const gate = spawnSync(process.execPath, ['--experimental-strip-types', fileURLToPath(new URL('./content-gate.mjs', import.meta.url))], {
     cwd: fileURLToPath(new URL('../', import.meta.url)), stdio: 'inherit', env: process.env,

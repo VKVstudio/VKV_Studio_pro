@@ -51,6 +51,20 @@ pnpm run preview     # http://127.0.0.1:4323
 
 The default build is a review build. Public generation has a separate signed editorial release gate; a successful local build does not complete that release.
 
+## Public WebMCP release
+
+For my public WebMCP release, I supply a first-party Origin Trial token for `https://vkvstudio.pro` through `PUBLIC_WEBMCP_ORIGIN_TRIAL`. From the frontend directory, I run:
+
+```powershell
+$env:PUBLIC_WEBMCP_ORIGIN_TRIAL = '<public WebMCP Origin Trial token for https://vkvstudio.pro>'
+$env:VKV_REQUIRE_WEBMCP_TRIAL = '1'
+pnpm run build:public
+```
+
+The public build command also sets `VKV_REQUIRE_WEBMCP_TRIAL=1` itself, so missing or invalid token metadata stops the release. The token is public page metadata and belongs in the generated HTML. I renew it before expiry; release validation requires more than fourteen days remaining.
+
+My build checks token metadata and the emitted pages. Chrome validates the signature and decides whether to enable the trial, so I also check the published origin in Chrome without feature-forcing flags. Browser activation and performance scores require separate verification.
+
 ## Work with me
 
 My commercial work lives at [VKVstudio.com](https://vkvstudio.com/en/). [Services and pricing](https://vkvstudio.com/en/services/) describe the current scope; [Trust & Process](https://vkvstudio.com/en/trust/) explains how I agree and deliver work.
