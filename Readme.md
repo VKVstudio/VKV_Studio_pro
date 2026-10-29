@@ -70,3 +70,13 @@ My build checks token metadata and the emitted pages. Chrome validates the signa
 My commercial work lives at [VKVstudio.com](https://vkvstudio.com/en/). [Services and pricing](https://vkvstudio.com/en/services/) describe the current scope; [Trust & Process](https://vkvstudio.com/en/trust/) explains how I agree and deliver work.
 
 For a project, start with a [written enquiry](https://vkvstudio.com/en/contact/). Describe the task, documents or website, and the constraints that matter. Project correspondence is in English. I agree the questions, scope, proposal and approval in writing; no introductory call is required.
+
+---
+
+<div align="center">
+  <a href="https://github.com/VKVstudio/.github/blob/main/DONATE.md">
+    <img src="https://raw.githubusercontent.com/VKVstudio/.github/main/assets/support-button.svg" alt="Support the work" height="40" />
+  </a>
+  <br>
+  <sub>If this project saved you time, consider supporting its development.</sub>
+</div>
